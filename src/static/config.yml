@@ -16,3 +16,10 @@ collections:
       - { label: "Cover", name: "cover", widget: "image"}
       - { label: "Tags", name: "tags", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown"}
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "markdown" }
