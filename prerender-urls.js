@@ -2,14 +2,17 @@ const { generateFileList } = require('./src/crawler');
 const { join } = require('path');
 const fs = require('fs');
 
-const [blogs] = generateFileList(join(__dirname, 'content')).nodes;
+const content = generateFileList(join(__dirname, 'content')).nodes;
+const blogs = content[0];
+const projects = content[2];
 module.exports = () => {
 	const pages = [
 		{
 			url: '/',
 			seo: {
 				cover: '/assets/profile.jpg'
-			}
+			},
+			projects: projects
 		},
 		{ url: '/contact/' },
 		{ url: '/contact/success' }
@@ -33,6 +36,7 @@ module.exports = () => {
 			}
 		};
 	}));
+
 
 	return pages;
 };

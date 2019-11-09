@@ -7,6 +7,7 @@ import Header from './header';
 import Home from '../routes/home';
 import Blogs from '../routes/blogs';
 import Blog from '../routes/blog';
+import Project from "../routes/projects"
 import Contact from '../routes/contact';
 import ContactSuccess from '../routes/contact-success';
 
@@ -26,8 +27,8 @@ export default class App extends Component {
 				<div id="app">
 					<Header />
 					<Router onChange={this.handleRoute}>
-						<Home path="/" />
-						<Blogs path="/blogs/" />
+						<Project path="/" />
+						<Blogs path="/blogs/"/>
 						<Blog path="/blog/:name" />
 						<Contact path="/contact/" />
 						<ContactSuccess path="/contact/success" />
