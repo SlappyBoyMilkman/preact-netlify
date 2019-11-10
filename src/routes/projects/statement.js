@@ -14,11 +14,21 @@ class Statement extends React.Component{
   componentWillReceiveProps(){
   }
 
+  title(){
+    if( this.state.statement.title ){
+      return(
+        <h1> { this.state.statement.title } </h1>
+      )
+    }
+  }
+
   render(){
     return(
       <div className = "statement">
         <div className = "statement__text-wrapper">
-          <h1> { this.state.statement.title } </h1>
+        {
+          this.title()
+        }
           <Markdown>{ this.state.statement.details }</Markdown>
         </div>
       </div>
