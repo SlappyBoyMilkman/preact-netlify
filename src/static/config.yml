@@ -23,3 +23,11 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "markdown" }
+
+  -name: "statement"
+  label: "Statement"
+  folder: "content/statemnt"
+  create: true
+  fields:
+    - { label: "Title", name: "title", widget: "string" }
+    - { label: "Body", name: "body", widget: "markdown" }

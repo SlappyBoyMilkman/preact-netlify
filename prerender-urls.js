@@ -37,6 +37,18 @@ module.exports = () => {
 		};
 	}));
 
+	pages.push( ...projects.edges.map( project => {
+		const data = fs.readFileSync(join('content', 'projects', project.id), 'utf-8').replace(/---(.*\n)*---/, '');
+		return {
+			url: `/projects/${project.id}`,
+			seo: project.details,
+			data: {
+				details: project.details,
+				content: project
+			}
+		};
+	}))
+
 
 	return pages;
 };
