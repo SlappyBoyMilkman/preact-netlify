@@ -5,7 +5,6 @@ import { usePrerenderData } from '@preact/prerender-data-provider';
 class Statement extends React.Component{
   constructor( props ){
     super();
-    debugger
     this.state = {
       statement: props.statement
     }

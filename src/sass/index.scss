@@ -43,3 +43,13 @@ p, h1, h2, h3{
 body{
   background-color: #F6F2ED;
 }
+
+.project__drawer{
+  position: fixed;
+  top: 0px;
+  left: 50vw;
+  height: 100vh;
+  width: 50vw;
+  transition: .8s;
+  background-color: #dcd8d4;
+}
