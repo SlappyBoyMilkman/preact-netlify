@@ -23,7 +23,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "string" }
-      - { label: "Images": name "images", widget: "markdown" }
+      - { label: "Images", name "images", widget: "markdown" }
   - name: "statement"
     label: "Statement"
     folder: "content/statement"
