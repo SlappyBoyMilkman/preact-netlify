@@ -27,6 +27,12 @@ module.exports = () => {
 		url: '/blogs/',
 		data: blogs
 	});
+	pages.push({
+		url: '/projects/',
+		projects: projects,
+		statement: statement,
+		data: blogs
+	});
 
 	// adding all blog pages
 	pages.push(...blogs.edges.map(blog => {
