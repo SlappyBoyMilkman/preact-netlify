@@ -7,4 +7,3 @@ description: |-
 
   ![](/assets/lucas-ludwig-dh2ztme9kni-unsplash.jpg)
 ---
-

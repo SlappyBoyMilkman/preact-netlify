@@ -3,20 +3,8 @@ const { join } = require('path');
 
 
 function getDetails(data) {
-	const matadata = data.match(/---(.*\n)*---/);
-  metadata = matadata.map(
-    ( m, index ) => {
-      return m.match(/(.*):(.*)/g).reduce((obj, detail) => {
-    		const value = detail.substr(detail.indexOf(':') + 2);
-    		const key = detail.substr(0, detail.indexOf(':'));
-    		obj[key] = value;
-    		return obj;
-    	}, {});
-    }
-  )
-
-  console.log( matadata )
-  return matadata;
+  let metadata = data.split( "---" )
+  return metadata;
 }
 
 function getStatement( source ){
@@ -31,9 +19,8 @@ function getStatement( source ){
   let obj = {
     id: statementContents[0].substr(statementContents[0].lastIndexOf('/') + 1),
     title: getDetails( data )[1].replace( "title: ", "" ).replace("\n", ""),
-    details: getDetails( data )["input"].replace( "---\ntitle: ", "" )
+    details: getDetails( data )[2]
   }
-
   return obj
 }
 

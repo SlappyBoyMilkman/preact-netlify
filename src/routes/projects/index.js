@@ -19,7 +19,8 @@ class Project extends React.Component{
   }
 
   componentWillReceiveProps( props ){
-    debugger
+    let project = props.matches.project
+    this.setState({ selectedProject: project })
   }
 
   project(){
