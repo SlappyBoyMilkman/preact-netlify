@@ -1,10 +1,13 @@
 const { generateFileList } = require('./src/crawler');
 const { join } = require('path');
 const fs = require('fs');
+const { getStatement } = require('./src/crawler/getStatement.js');
+
 
 const content = generateFileList(join(__dirname, 'content')).nodes;
 const blogs = content[0];
 const projects = content[2];
+const statement = getStatement( join( __dirname, "content" ) );
 module.exports = () => {
 	const pages = [
 		{
@@ -12,7 +15,8 @@ module.exports = () => {
 			seo: {
 				cover: '/assets/profile.jpg'
 			},
-			projects: projects
+			projects: projects,
+			statement: statement,
 		},
 		{ url: '/contact/' },
 		{ url: '/contact/success' }
@@ -42,6 +46,8 @@ module.exports = () => {
 		return {
 			url: `/projects/${project.id}`,
 			seo: project.details,
+			projects: projects,
+			statement: statement,
 			data: {
 				details: project.details,
 				content: project

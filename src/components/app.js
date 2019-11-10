@@ -21,11 +21,14 @@ export default class App extends Component {
 		this.currentUrl = e.url;
 	};
 
+	header(){
+		debugger
+	}
+
 	render(props) {
 		return (
 			<Provider value={props}>
 				<div id="app">
-					<Header />
 					<Router onChange={this.handleRoute}>
 						<Project path="/" />
 						<Project path="/projects/:project?" />

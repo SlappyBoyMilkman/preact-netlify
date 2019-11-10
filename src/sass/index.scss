@@ -1,0 +1,45 @@
+$gutter: 40px;
+
+.wrap{
+  padding: 0px $gutter;
+}
+
+.grid{
+  &.grid__flex{
+    display: flex;
+    flex-direction: column;
+  }
+  margin-left: -$gutter;
+  .grid__item{
+    float: left;
+    padding-left: $gutter;
+    &.medium-up--one-half{
+      width: 50%;
+    }
+  }
+}
+
+.statement{
+  width: 50vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+.statement__text-wrapper{
+  max-width: 550px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -50% );
+}
+
+p, h1, h2, h3{
+  color: #0A6655;
+}
+
+body{
+  background-color: #F6F2ED;
+}

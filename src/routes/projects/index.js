@@ -9,6 +9,7 @@ class Project extends React.Component{
     const [data, isLoading] = usePrerenderData(props);
     this.state = {
       settings: data,
+      statement: data.statement,
       selectedProject: this.getSelectedProject()
     }
   }
@@ -17,7 +18,7 @@ class Project extends React.Component{
     return undefined
   }
 
-  componentWillReceiveProps(){
+  componentWillReceiveProps( props ){
     debugger
   }
 
@@ -28,14 +29,16 @@ class Project extends React.Component{
   render(){
     return(
       <div className = "main">
-        <div className = "grid">
-          <div className = "grid__item medium-up--one-half">
-            <Statement/>
-          </div>
-          <div className = "grid__item medium-up--one-half">
-            {
-              this.project()
-            }
+        <div className = "wrap">
+          <div className = "grid grid__flex">
+            <div className = "grid__item medium-up--one-half">
+              <Statement statement = { this.state.statement } />
+            </div>
+            <div className = "grid__item medium-up--one-half">
+              {
+                this.project()
+              }
+            </div>
           </div>
         </div>
       </div>
