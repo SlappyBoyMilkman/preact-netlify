@@ -28,7 +28,6 @@ export default class App extends Component {
 				<div id="app">
 					<Header />
 					<Router onChange={this.handleRoute}>
-						<Project path="/" />
 						<Project path="/projects/:project?" />
 						<Work path="/work"/>
 						<Blogs path="/blogs/"/>

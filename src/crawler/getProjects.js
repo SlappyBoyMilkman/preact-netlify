@@ -24,7 +24,7 @@ function getMarkdown( data ){
 function getDescription( data ){
   let descriptionIndex = data.indexOf( "description:" );
   let description = data.slice( descriptionIndex )
-  description = description.slice( 0, description.indexOf( "---" ) );
+  description = description.slice( 0, description.indexOf( "lefthand" ) );
   description = description.replace( "description: ", "" ).replace( ">-", "" )
   return description
 }
@@ -35,7 +35,7 @@ function getBody( data ){
 }
 
 function getLeft( data ){
-  let leftHandIndex = data.indexOf( "lefthand: " )
+  let leftHandIndex = data.indexOf( "lefthand: true" )
   if( leftHandIndex !== -1 ){
     return true
   }else{
