@@ -7,6 +7,7 @@ import Header from './header';
 import Home from '../routes/home';
 import Blogs from '../routes/blogs';
 import Blog from '../routes/blog';
+import Work from "../routes/work"
 import Project from "../routes/projects"
 import Contact from '../routes/contact';
 import ContactSuccess from '../routes/contact-success';
@@ -21,17 +22,15 @@ export default class App extends Component {
 		this.currentUrl = e.url;
 	};
 
-	header(){
-		debugger
-	}
-
 	render(props) {
 		return (
 			<Provider value={props}>
 				<div id="app">
+					<Header />
 					<Router onChange={this.handleRoute}>
 						<Project path="/" />
 						<Project path="/projects/:project?" />
+						<Work path="/work"/>
 						<Blogs path="/blogs/"/>
 						<Blog path="/blog/:name" />
 						<Contact path="/contact/" />

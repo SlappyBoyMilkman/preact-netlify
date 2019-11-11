@@ -23,6 +23,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
+      - { label: "Left Side List", name: "lefthand", widget: "boolean" }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "statement"
     label: "Statement"

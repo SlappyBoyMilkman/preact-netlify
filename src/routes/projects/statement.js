@@ -6,11 +6,19 @@ class Statement extends React.Component{
   constructor( props ){
     super();
     this.state = {
-      statement: props.statement
+      statement: props.statement,
+      drawerOpen: props.drawerOpen
     }
   }
 
-  componentWillReceiveProps(){
+  componentWillReceiveProps( props ){
+    this.setState({
+      drawerOpen: props.drawerOpen
+    })
+  }
+
+  componentDidMount(){
+    debugger
   }
 
   title(){
@@ -21,14 +29,26 @@ class Statement extends React.Component{
     }
   }
 
+  getStyle(){
+    if( this.state.drawerOpen ){
+      return({
+        opacity: .7,
+      })
+    }else{
+      return({
+        opacity: 1,
+      })
+    }
+  }
+
   render(){
     return(
       <div className = "statement">
-        <div className = "statement__text-wrapper">
-        {
-          this.title()
-        }
-          <Markdown>{ this.state.statement.details }</Markdown>
+        <div className = "statement__text-wrapper" style = { this.getStyle() }>
+          {
+            this.title()
+          }
+          <Markdown >{ this.state.statement.details }</Markdown>
         </div>
       </div>
     )

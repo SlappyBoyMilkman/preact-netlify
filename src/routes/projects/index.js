@@ -3,12 +3,13 @@ import React from "react";
 import { usePrerenderData } from '@preact/prerender-data-provider';
 import Statement from "./statement"
 import SelectedProject from "./selectedProject"
+import { route } from 'preact-router';
 
-class Project extends React.Component{
+export class Project extends React.Component{
   constructor( props ){
     super();
     const [data, isLoading] = usePrerenderData(props);
-    let projects = data.projects.edges
+    let projects = data.projects
     let selectedProject = this.getSelectedProject( props.matches.project, projects  )
     let drawerOpen = false
     if( selectedProject ){
@@ -62,19 +63,52 @@ class Project extends React.Component{
     })
   }
 
+  unselect(){
+    route("/projects")
+    this.setState({ drawerOpen: false })
+  }
+
+  getOverlayStyle(){
+    if( this.state.drawerOpen ){
+      return({
+        opacity: .4,
+        pointerEvents: "painted"
+      })
+    }else{
+      return({
+        opacity: 0,
+        pointerEvents: "none"
+      })
+    }
+  }
+
+  overlay(){
+    if( this.state.selectedProject ){
+      return(
+        <div className = "projet__drawer__overlay" onClick = { this.unselect.bind( this ) } style = { this.getOverlayStyle() }></div>
+      )
+    }
+  }
+
   render(){
     return(
       <div className = "main">
         <div className = "wrap">
           <div className = "grid grid__flex">
             <div className = "grid__item medium-up--one-half">
-              <Statement statement = { this.state.statement } />
+              <div className = "item">
+                <Statement statement = { this.state.statement } drawerOpen = { this.state.drawerOpen }/>
+              </div>
             </div>
             <div className = "grid__item medium-up--one-half">
-              <div className = "project__drawer" style = { this.getStyle() }>
-                {
-                  this.project()
-                }
+              <div className = "project__drawer__wrapper">
+                <div className = "item">
+                  <div className = "project__drawer" style = { this.getStyle() }>
+                  {
+                    this.project()
+                  }
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -84,4 +118,4 @@ class Project extends React.Component{
   }
 }
 
-export default Project
+export default Project;

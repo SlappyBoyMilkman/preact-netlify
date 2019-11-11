@@ -2,13 +2,15 @@ const { generateFileList } = require('./src/crawler');
 const { join } = require('path');
 const fs = require('fs');
 const { getStatement } = require('./src/crawler/getStatement.js');
+const { getProjects } = require('./src/crawler/getProjects.js');
 
 
 const content = generateFileList(join(__dirname, 'content')).nodes;
 const blogs = content[0];
-const projects = content[2];
+const projects = getProjects( join( __dirname, "content" ) );
 const statement = getStatement( join( __dirname, "content" ) );
-module.exports = () => {
+
+let funky = () => {
 	const pages = [
 		{
 			url: '/',
@@ -19,7 +21,11 @@ module.exports = () => {
 			statement: statement,
 		},
 		{ url: '/contact/' },
-		{ url: '/contact/success' }
+		{ url: '/contact/success' },
+		{
+			url: '/work',
+		 	projects: projects
+	 	}
 	];
 
 	// adding blogs list posts page
@@ -27,12 +33,17 @@ module.exports = () => {
 		url: '/blogs/',
 		data: blogs
 	});
+
+
+
 	pages.push({
 		url: '/projects/',
 		projects: projects,
 		statement: statement,
 		data: blogs
 	});
+
+
 
 	// adding all blog pages
 	pages.push(...blogs.edges.map(blog => {
@@ -47,20 +58,21 @@ module.exports = () => {
 		};
 	}));
 
-	pages.push( ...projects.edges.map( project => {
-		const data = fs.readFileSync(join('content', 'projects', project.id), 'utf-8').replace(/---(.*\n)*---/, '');
-		return {
+
+	pages.push( ...projects.map( project => {
+		let obj = {
 			url: `/projects/${project.id}`,
-			seo: project.details,
 			projects: projects,
 			statement: statement,
-			data: {
-				details: project.details,
-				content: project
-			}
+			project: project
 		};
+		return obj
 	}))
-
 
 	return pages;
 };
+
+// let pro = funky()
+
+// console.log( pro )
+module.exports = funky;
