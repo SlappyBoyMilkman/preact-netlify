@@ -18,7 +18,7 @@ collections:
       - { label: "Body", name: "body", widget: "markdown"}
   - name: "projects"
     label: "Projects"
-    folder: "content/projects"x
+    folder: "content/projects"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
