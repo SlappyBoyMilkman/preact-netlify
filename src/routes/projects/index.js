@@ -9,6 +9,7 @@ export class Project extends React.Component{
   constructor( props ){
     super();
     const [data, isLoading] = usePrerenderData(props);
+    debugger
     let projects = data.projects
     let selectedProject = this.getSelectedProject( props.matches.project, projects  )
     let drawerOpen = false
