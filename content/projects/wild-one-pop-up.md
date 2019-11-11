@@ -1,5 +1,6 @@
 ---
 title: WILD ONE POP-UP
+year: '2018'
 shortDescription: Line of dog toys
 description: >-
   Shortly after their brand launch in August 2018, Wild One opened a 4 month
