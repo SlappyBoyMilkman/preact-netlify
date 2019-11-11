@@ -1,5 +1,6 @@
 ---
 title: Porter
+year: '2019'
 shortDescription: Brand strategy
 description: >-
   W&P released it's initial line of make-and-take containers with the Porter
