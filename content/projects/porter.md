@@ -1,5 +1,6 @@
 ---
 title: Porter
+shortDescription: Brand strategy
 description: >-
   Shortly after their brand launch in August 2018, Wild One opened a 4 month
   pop-up location at 242 Lafayette in Nolita. The floorplan incorporated areas
