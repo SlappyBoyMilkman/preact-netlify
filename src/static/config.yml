@@ -22,6 +22,7 @@ collections:
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Short Description", name: "shortDescription", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Left Side List", name: "lefthand", widget: "boolean" }
       - { label: "Body", name: "body", widget: "markdown" }
