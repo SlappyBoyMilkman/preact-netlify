@@ -25,13 +25,17 @@ function getDescription( data ){
   let descriptionIndex = data.indexOf( "description:" );
   let description = data.slice( descriptionIndex )
   description = description.slice( 0, description.indexOf( "---" ) );
-  description = description.replace( "description: ", "" ).replace( ">-", "" ).replace(/\n/g,'').replace( "  /g", "" );
+  description = description.replace( "description: ", "" ).replace( ">-", "" )
   return description
 }
 
 function getBody( data ){
   let preview = data.match(/---(.*\n)*---/);
   return preview
+}
+
+function getLeft( data ){
+  console.log( date )
 }
 
 function getProjects( source ){
@@ -49,6 +53,7 @@ function getProjects( source ){
       obj.title = details.title;
       obj.details = getDescription( data );
       obj.id = project.substr(project.lastIndexOf('/') + 1),
+      obj.left = getLeft( data )
       obj.markdown = getMarkdown( data )
       return obj
     }

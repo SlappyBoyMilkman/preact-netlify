@@ -25,7 +25,7 @@ class SelectedProject extends React.Component{
       <div>
         <h2>{ this.state.project.title }</h2>
         <div className = "selectedProject__description">
-          <p>{ this.state.project.description }</p>
+          <p>{ this.state.project.details }</p>
         </div>
         <Markdown>
           {
