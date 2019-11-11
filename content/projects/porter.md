@@ -2,11 +2,12 @@
 title: Porter
 shortDescription: Brand strategy
 description: >-
-  Shortly after their brand launch in August 2018, Wild One opened a 4 month
-  pop-up location at 242 Lafayette in Nolita. The floorplan incorporated areas
-  for merchandising and dwell space for pets and their humans. The banquette
-  included workspaces that allowed the founders to introduce the brand story,
-  and engage directly with their customers.
+  W&P released it's initial line of make-and-take containers with the Porter
+  bowl in ceramic or plastic. The Porter line provides a solution to curb the
+  use of single use plastics in your daily life. I helped W&P find market
+  opportunities in the container space, and provided brand strategy with line
+  extension recommendations, materials research, art direction, and form
+  development.
 lefthand: true
 ---
 Something something else
