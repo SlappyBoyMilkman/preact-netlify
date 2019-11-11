@@ -6,7 +6,7 @@ description: >-
   for merchandising and dwell space for pets and their humans. The banquette
   included workspaces that allowed the founders to introduce the brand story,
   and engage directly with their customers.
-lefthand: true
+lefthand: false
 ---
 ![](/assets/brett-jordan-1329359-unsplash.jpg)
 
