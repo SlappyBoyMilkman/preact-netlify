@@ -1,6 +1,7 @@
 import { h } from 'preact';
 import React from "react";
 import { usePrerenderData } from '@preact/prerender-data-provider';
+import { Link } from 'preact-router/match';
 
 class Work extends React.Component{
   constructor( props ){
@@ -12,26 +13,44 @@ class Work extends React.Component{
   }
 
   leftSideProjects(){
-
+    return this.state.projects.filter( ( project ) => { return project.left } ).map(
+      function( project, index ){
+        return(
+          <div key = {`left-side-${ index }`} className = "work-item">
+            <Link href = { `/projects/${project.id}` }>{ project.title }</Link>
+          </div>
+        )
+      }
+    )
   }
 
   rightSideProjects(){
-
+    return this.state.projects.filter( ( project ) => { return !project.left } ).map(
+      function( project, index ){
+        return(
+          <div key = {`right-side-${ index }`} className = "work-item">
+            <Link href = { `/projects/${project.id}` }>{ project.title }</Link>
+          </div>
+        )
+      }
+    )
   }
 
-  rendeR(){
+  render(){
     return(
-      <div className = "wrapper">
-        <div className = "grid">
-          <div className = "grid__item medium-up--one-half">
-            {
-              this.leftSideProjects()
-            }
-          </div>
-          <div className = "grid__item medium-up--one-half">
-            {
-              this.rightSideProjects()
-            }
+      <div className = "page">
+        <div className = "wrap">
+          <div className = "grid">
+            <div className = "grid__item medium-up--one-half">
+              {
+                this.leftSideProjects()
+              }
+            </div>
+            <div className = "grid__item medium-up--one-half">
+              {
+                this.rightSideProjects()
+              }
+            </div>
           </div>
         </div>
       </div>

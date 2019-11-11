@@ -35,7 +35,12 @@ function getBody( data ){
 }
 
 function getLeft( data ){
-  console.log( date )
+  let leftHandIndex = data.indexOf( "lefthand: " )
+  if( leftHandIndex !== -1 ){
+    return true
+  }else{
+    return false
+  }
 }
 
 function getProjects( source ){

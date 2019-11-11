@@ -11,10 +11,23 @@
 }
 .grid .grid__item {
   float: left;
+  box-sizing: border-box;
   padding-left: 120px;
 }
 .grid .grid__item.medium-up--one-half {
   width: 50%;
+}
+
+.page {
+  padding-top: 120px;
+}
+
+.work-item {
+  color: #01AC82;
+}
+.work-item a {
+  color: #01AC82;
+  font-size: 1.4vw;
 }
 
 .statement {
@@ -36,6 +49,10 @@
 
 header h1 {
   padding-left: 0px;
+}
+header a {
+  color: #01AC82;
+  font-size: 1.2vw;
 }
 
 .statement__text-wrapper {

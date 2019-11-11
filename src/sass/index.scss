@@ -14,11 +14,24 @@ $padding-images: 10px;
   margin-left: -$gutter;
   .grid__item{
     float: left;
+    box-sizing: border-box;
     padding-left: $gutter;
     &.medium-up--one-half{
       width: 50%;
     }
   }
+}
+
+.page{
+  padding-top: 120px;
+}
+
+.work-item{
+  a{
+    color: #01AC82;
+    font-size: 1.4vw;
+  }
+  color: #01AC82;
 }
 
 .statement{
@@ -42,6 +55,11 @@ $padding-images: 10px;
 header{
   h1{
     padding-left: 0px;
+  }
+
+  a{
+    color: #01AC82;
+    font-size: 1.2vw;
   }
 }
 
