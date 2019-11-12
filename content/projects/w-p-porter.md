@@ -9,7 +9,7 @@ description: >-
   opportunities in the container space, and provided brand strategy with line
   extension recommendations, materials research, art direction, and form
   development.
-lefthand: false
+lefthand: true
 ---
 ![](/assets/2.png)
 
