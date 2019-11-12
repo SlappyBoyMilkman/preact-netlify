@@ -9,7 +9,7 @@ description: >-
   to unveil the new branding. Bright colors and stark lighting elements evoke
   the fantastical feeling of a reimagined food Eden, a core concept of the
   rebrand.
-lefthand: true
+lefthand: false
 ---
 ![](/assets/2.png)
 
