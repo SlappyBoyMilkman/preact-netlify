@@ -1,5 +1,5 @@
 ---
-title: Porter
+title: W&P Porter
 year: '2019'
 shortDescription: Brand strategy
 description: >-
@@ -11,8 +11,6 @@ description: >-
   development.
 lefthand: true
 ---
-Something something else
+![](/assets/2.png)
 
-![](/assets/brett-jordan-1329359-unsplash.jpg)
-
-![](/assets/cody-black-nm89mzvar5i-unsplash.jpg)
+![](/assets/lucas-ludwig-dh2ztme9kni-unsplash.jpg)
