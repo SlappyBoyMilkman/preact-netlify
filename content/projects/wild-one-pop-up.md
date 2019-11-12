@@ -1,5 +1,5 @@
 ---
-title: WILD ONE POP-UP
+title: Wild One Pop-Up
 year: '2018'
 shortDescription: Line of dog toys
 description: >-
