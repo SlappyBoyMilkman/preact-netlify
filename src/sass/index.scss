@@ -27,9 +27,15 @@ $padding-images: 10px;
 }
 
 .work-item{
+  margin-top: 40px;
   a{
     color: #01AC82;
     font-size: 1.4vw;
+  }
+  p{
+    margin: 0px;
+    margin-top: 8px;
+    margin-bottom: 8px;
   }
   color: #01AC82;
 }

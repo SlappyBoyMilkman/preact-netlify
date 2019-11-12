@@ -43,6 +43,26 @@ function getLeft( data ){
   }
 }
 
+function getYear( data ){
+	let index = data.indexOf( "year:" )
+	let year = data.slice( index )
+	year = year.slice( 0, year.indexOf("shortDescription:") )
+	year = year.replace( "year: ", "" )
+	year = year.replace( "'", "" )
+	year = year.replace( "'", "" )
+	return year
+}
+
+function getShortDescription( data ){
+	let index = data.indexOf( "shortDescription:" )
+	let shorty = data.slice( index )
+	shorty = shorty.replace( "shortDescription:", "" )
+	shorty = shorty.slice( 0, shorty.indexOf( "description:" ) )
+	console.log( shorty )
+	return shorty
+
+}
+
 function getProjects( source ){
   const isDirectory = source => fs.lstatSync(source).isDirectory();
   const isFile = source => !fs.lstatSync(source).isDirectory();
@@ -59,6 +79,8 @@ function getProjects( source ){
       obj.details = getDescription( data );
       obj.id = project.substr(project.lastIndexOf('/') + 1),
       obj.left = getLeft( data )
+			obj.year = getYear( data )
+			obj.shortDescription = getShortDescription( data )
       obj.markdown = getMarkdown( data )
       return obj
     }

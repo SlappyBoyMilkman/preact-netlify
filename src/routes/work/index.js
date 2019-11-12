@@ -18,6 +18,8 @@ class Work extends React.Component{
         return(
           <div key = {`left-side-${ index }`} className = "work-item">
             <Link href = { `/projects/${project.id}` }>{ project.title }</Link>
+            <p> { project.year } </p>
+            <p> { project.shortDescription } </p>
           </div>
         )
       }

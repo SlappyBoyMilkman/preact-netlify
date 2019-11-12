@@ -23,11 +23,17 @@
 }
 
 .work-item {
+  margin-top: 40px;
   color: #01AC82;
 }
 .work-item a {
   color: #01AC82;
   font-size: 1.4vw;
+}
+.work-item p {
+  margin: 0px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 .statement {
