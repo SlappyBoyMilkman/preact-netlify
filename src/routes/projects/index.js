@@ -2,14 +2,13 @@ import { h } from 'preact';
 import React from "react";
 import { usePrerenderData } from '@preact/prerender-data-provider';
 import Statement from "./statement"
-import SelectedProject from "./selectedProject"
+import ProjectDrawer from "./projectDrawer"
 import { route } from 'preact-router';
 
 export class Project extends React.Component{
   constructor( props ){
     super();
     const [data, isLoading] = usePrerenderData(props);
-    debugger
     let projects = data.projects
     let selectedProject = this.getSelectedProject( props.matches.project, projects  )
     let drawerOpen = false
@@ -46,12 +45,14 @@ export class Project extends React.Component{
     this.setState({ selectedProject: selectedProject, drawerOpen: drawerOpen })
   }
 
-  project(){
-    if( this.state.selectedProject ){
-      return (
-        <SelectedProject project = { this.state.selectedProject }/>
-      )
-    }
+  projects(){
+    return this.state.projects.map(
+      function( project, index ){
+        return(
+          <ProjectDrawer project = { project } selectedProject = { this.state.selectedProject } key = { `fucking-preact-${index}` }/>
+        )
+      }.bind( this )
+    )
   }
 
   getStyle(){
@@ -104,11 +105,9 @@ export class Project extends React.Component{
             <div className = "grid__item medium-up--one-half">
               <div className = "project__drawer__wrapper">
                 <div className = "item">
-                  <div className = "project__drawer" style = { this.getStyle() }>
                   {
-                    this.project()
+                    this.projects()
                   }
-                  </div>
                 </div>
               </div>
             </div>

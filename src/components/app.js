@@ -5,6 +5,7 @@ import Header from './header';
 
 // Code-splitting is automated for routes
 import Home from '../routes/home';
+import About from "../routes/about"
 import Blogs from '../routes/blogs';
 import Blog from '../routes/blog';
 import Work from "../routes/work"
@@ -35,6 +36,7 @@ export default class App extends Component {
 						<Blog path="/blog/:name" />
 						<Contact path="/contact/" />
 						<ContactSuccess path="/contact/success" />
+						<About path="/about/"/>
 					</Router>
 				</div>
 			</Provider>

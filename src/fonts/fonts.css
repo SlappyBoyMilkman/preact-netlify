@@ -1,0 +1,69 @@
+@font-face{
+  font-family: 'canela-bold';
+  src: local("Canela-Bold.otf"), url("./Canela-Bold.woff");
+}
+
+@font-face{
+  font-family: 'graphik';
+  src: local("graphik.otf"), url("./Graphik-Regular.woff");
+}
+
+@font-face{
+  font-family: 'graphik-medium';
+  src: local("graphik.otf"), url("./Graphik-Medium.woff");
+}
+
+@font-face{
+  font-family: 'akkurat';
+  src: local("graphik.otf"), url("./AkkuratMono-Regular.woff2");
+}
+
+@font-face{
+  font-family: 'akkurat';
+  src: local("graphik.otf"), url("./AkkuratMono-Regular.woff2");
+}
+
+.canela-bold{
+  font-family: 'canela-bold';
+  line-height: 1.33em
+}
+
+.graphik{
+  font-family: 'graphik';
+  line-height: 2em;
+}
+
+.graphik-medium{
+  font-family: "graphik-medium"
+}
+
+.graphik-description{
+  font-size: 12px;
+}
+
+.akkurat{
+  font-family: "akkurat";
+}
+
+.akkurat-title{
+  font-size: 18px;
+}
+
+.akkurat-year{
+  font-size: 12px;
+}
+
+.akkurat-pro{
+  font-family: "akkurat";
+}
+
+a:hover:after{
+  position: absolute;
+  content: " ";
+  bottom: -8px;
+  height: 5px;
+  background-image: url( "../assets/wave.png" );
+  background-size: auto 100%;
+  width: 100%;
+  left: 0px;
+}

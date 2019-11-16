@@ -3,12 +3,14 @@ const { join } = require('path');
 const fs = require('fs');
 const { getStatement } = require('./src/crawler/getStatement.js');
 const { getProjects } = require('./src/crawler/getProjects.js');
+const { getAbout } = require( "./src/crawler/getAbout.js" )
 
 
-const content = generateFileList(join(__dirname, 'content')).nodes;
-const blogs = content[0];
+const content = 1;
+const blogs = 1;
 const projects = getProjects( join( __dirname, "content" ) );
 const statement = getStatement( join( __dirname, "content" ) );
+const about = getAbout( join( __dirname, "content" ) );
 
 let funky = () => {
 	const pages = [
@@ -31,7 +33,6 @@ let funky = () => {
 	// adding blogs list posts page
 	pages.push({
 		url: '/blogs/',
-		data: blogs
 	});
 
 
@@ -40,24 +41,7 @@ let funky = () => {
 		url: '/projects/',
 		projects: projects,
 		statement: statement,
-		data: blogs
 	});
-
-
-
-	// adding all blog pages
-	pages.push(...blogs.edges.map(blog => {
-		const data = fs.readFileSync(join('content', 'blog', blog.id), 'utf-8').replace(/---(.*\n)*---/, '');
-		return {
-			url: `/blog/${blog.id}`,
-			seo: blog.details,
-			data: {
-				details: blog.details,
-				content: data
-			}
-		};
-	}));
-
 
 	pages.push( ...projects.map( project => {
 		let obj = {

@@ -34,3 +34,18 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "experience"
+    label: "Experience"
+    folder: "content/experience"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "internships"
+    label: "Internships"
+    folder: "content/internships"
+    create: true
+    fields:
+      - { label: "Company", name: "company", widget: "markdown" }
+      - { label: "dates", name: "dates", widget: "string" }

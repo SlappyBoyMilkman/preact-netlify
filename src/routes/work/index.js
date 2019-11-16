@@ -2,6 +2,7 @@ import { h } from 'preact';
 import React from "react";
 import { usePrerenderData } from '@preact/prerender-data-provider';
 import { Link } from 'preact-router/match';
+import "../../fonts/fonts.css"
 
 class Work extends React.Component{
   constructor( props ){
@@ -16,7 +17,7 @@ class Work extends React.Component{
     return this.state.projects.filter( ( project ) => { return project.left } ).map(
       function( project, index ){
         return(
-          <div key = {`left-side-${ index }`} className = "work-item">
+          <div key = {`left-side-${ index }`} className = "work-item akkurat-pro">
             <Link href = { `/projects/${project.id}` }>{ project.title }</Link>
             <p> { project.year } </p>
             <p> { project.shortDescription } </p>
@@ -30,8 +31,10 @@ class Work extends React.Component{
     return this.state.projects.filter( ( project ) => { return !project.left } ).map(
       function( project, index ){
         return(
-          <div key = {`right-side-${ index }`} className = "work-item">
+          <div key = {`right-side-${ index }`} className = "work-item akkurat-pro">
             <Link href = { `/projects/${project.id}` }>{ project.title }</Link>
+            <p> { project.year } </p>
+            <p> { project.shortDescription } </p>
           </div>
         )
       }

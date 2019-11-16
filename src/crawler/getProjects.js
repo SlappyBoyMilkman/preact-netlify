@@ -58,9 +58,15 @@ function getShortDescription( data ){
 	let shorty = data.slice( index )
 	shorty = shorty.replace( "shortDescription:", "" )
 	shorty = shorty.slice( 0, shorty.indexOf( "description:" ) )
-	console.log( shorty )
 	return shorty
 
+}
+
+function getProjectsFolder( src ){
+	let newSrc = src.filter( ( folder ) => {
+		return (folder.indexOf( "/projects" ) !== - 1)
+	});
+	return newSrc[0]
 }
 
 function getProjects( source ){
@@ -68,7 +74,7 @@ function getProjects( source ){
   const isFile = source => !fs.lstatSync(source).isDirectory();
   const getAllListings = source =>
 		fs.readdirSync(source).map(name => join(source, name));
-  let projectFolder = getAllListings(source)[2];
+  let projectFolder = getProjectsFolder( getAllListings( source ) );;
   let projectContents = getAllListings( projectFolder )
   let fuckProjects = projectContents.map(
     function( project, index ){

@@ -5,7 +5,6 @@ import style from './style';
 
 const blogs = (props) => {
 	const [data, isLoading] = usePrerenderData(props);
-	debugger
 	return (
 		<div class={style.pageBlogs}>
 			<h1 class={style.pageTitle}>My Blogs</h1>

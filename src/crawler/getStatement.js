@@ -7,13 +7,22 @@ function getDetails(data) {
   return metadata;
 }
 
+
+function getStatementFolder( src ){
+	let newSrc = src.filter( ( folder ) => {
+		return (folder.indexOf( "/statement" ) !== - 1)
+	});
+	return newSrc[0]
+}
+
+
 function getStatement( source ){
   const isDirectory = source => fs.lstatSync(source).isDirectory();
   const isFile = source => !fs.lstatSync(source).isDirectory();
   const getAllListings = source =>
 		fs.readdirSync(source).map(name => join(source, name));
   let allContent = getAllListings(source);
-  let statementFolder = allContent[3];
+  let statementFolder = getStatementFolder( allContent )
   let statementContents = getAllListings( statementFolder )
   const data = fs.readFileSync( statementContents[0], 'utf-8');
   let obj = {

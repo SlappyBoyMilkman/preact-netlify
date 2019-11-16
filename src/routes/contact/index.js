@@ -4,7 +4,6 @@ import { usePrerenderData } from '@preact/prerender-data-provider';
 
 const photographs = (props) => {
 	const [data, isLoading] = usePrerenderData(props);
-	debugger
 	return (
 		<div class={style.pageContact}>
 			<h1 class={style.pageTitle}>Contact me</h1>

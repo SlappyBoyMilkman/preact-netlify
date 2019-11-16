@@ -1,6 +1,10 @@
 import React from "react";
 import Markdown from 'markdown-to-jsx';
 import { usePrerenderData } from '@preact/prerender-data-provider';
+import "../../fonts/fonts.css"
+import { route } from 'preact-router';
+
+const $ = require( "jquery" )
 
 class Statement extends React.Component{
   constructor( props ){
@@ -18,13 +22,12 @@ class Statement extends React.Component{
   }
 
   componentDidMount(){
-    debugger
   }
 
   title(){
     if( this.state.statement.title ){
       return(
-        <h1> { this.state.statement.title } </h1>
+        <h1 className = "canela-bold"> { this.state.statement.title } </h1>
       )
     }
   }
@@ -32,13 +35,33 @@ class Statement extends React.Component{
   getStyle(){
     if( this.state.drawerOpen ){
       return({
-        opacity: .7,
+        opacity: .3,
       })
     }else{
       return({
         opacity: 1,
       })
     }
+  }
+
+  assignRef( ref ){
+    let a = $( ref ).find( "a" )
+    a.on( "mouseenter", function( anchor ){
+      let jqAnchor = $( anchor.target )
+      let html = anchor.target.outerHTML
+      let first = html.slice( html.indexOf('href="') + 6 )
+      let string = first.slice( 0, first.indexOf(".md") + 3 )
+      route( string )
+      window.scrollTo( 0, 0 )
+      jqAnchor.addClass("hover")
+    })
+
+    a.on( "mouseleave", function( anchor ){
+      let jqAnchor = $( anchor.target )
+      jqAnchor.removeClass("hover")
+    })
+
+
   }
 
   render(){
@@ -48,7 +71,9 @@ class Statement extends React.Component{
           {
             this.title()
           }
-          <Markdown >{ this.state.statement.details }</Markdown>
+          <div className = "graphik" ref = { this.assignRef.bind( this ) }>
+            <Markdown>{ this.state.statement.details }</Markdown>
+          </div>
         </div>
       </div>
     )

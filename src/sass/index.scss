@@ -1,4 +1,4 @@
-$gutter: 120px;
+$gutter: 150px;
 $start-top: 150px;
 $padding-images: 10px;
 
@@ -26,16 +26,25 @@ $padding-images: 10px;
   padding-top: 120px;
 }
 
+a{
+  color: #01AC82;
+  text-decoration: none;
+  position: relative;
+}
+
 .work-item{
-  margin-top: 40px;
+  margin-top: 30px;
   a{
     color: #01AC82;
-    font-size: 1.4vw;
+    font-size: 14px;
+    line-height: 2em;
+    margin-bottom: 20px;
   }
   p{
     margin: 0px;
-    margin-top: 8px;
-    margin-bottom: 8px;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 0px;
   }
   color: #01AC82;
 }
@@ -43,18 +52,30 @@ $padding-images: 10px;
 .statement{
   width: 100%;
   position: fixed;
-  padding-left: 120px;
+  padding-left: $gutter;
   top: 140px;
   left: 0px;
   width: 50vw;
   box-sizing: border-box;
   padding-right: 40px;
+  &:hover{
+    .statement__text-wrapper{
+      opacity: 1 !important;
+    }
+  }
   h1{
-    font-size: 2.8vw;
+    font-size: 2.4vw;
+    letter-spacing: .015em;
   }
 
   p{
-    font-size: 1.4vw;
+    line-height: 1.8em;
+    font-size: 1.2vw;
+    letter-spacing: .01em;
+    color: #0A6655;
+  }
+
+  a.hover{
   }
 }
 
@@ -65,7 +86,7 @@ header{
 
   a{
     color: #01AC82;
-    font-size: 1.2vw;
+    font-size: 14px;
   }
 }
 
@@ -114,7 +135,7 @@ body{
   box-sizing: border-box;
   width: 100%;
   background-color: #F8F8F5;
-  transition: .8s;
+  transition: opacity .4s, transform .4s;
   z-index: 2;
 
   img{
@@ -140,10 +161,14 @@ body{
 .header__nav{
   float: right;
   margin-right: 8px;
+  a{
+    margin-left: 10px;
+  }
 }
 
 header{
   position: fixed;
   width: 100%;
-  z-index: 10;
+  z-index: 15;
+  color: #01AC82;
 }
