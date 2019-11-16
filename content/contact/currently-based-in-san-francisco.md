@@ -1,5 +1,5 @@
 ---
-title: "Currently based \vin San Francisco."
+title: Currently based in San Francisco.
 ---
 Reach out for any freelance work, or just to chat! Currently looking for design opportunities in the Bay Area.
 
