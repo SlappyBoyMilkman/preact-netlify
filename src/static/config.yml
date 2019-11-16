@@ -47,6 +47,6 @@ collections:
     folder: "content/internships"
     create: true
     fields:
-      - { label: "Title", name: "company", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
       - { label: "Company", name: "company", widget: "markdown" }
       - { label: "dates", name: "dates", widget: "string" }

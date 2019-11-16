@@ -9,6 +9,7 @@ function doThing(){
   let projects = getProjects( source )
   let statement = getStatement( source )
   let about = getAbout( source )
+  // console.log( about )
 }
 
 doThing();
