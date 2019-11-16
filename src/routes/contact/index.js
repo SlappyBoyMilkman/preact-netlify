@@ -1,37 +1,37 @@
 import { h } from 'preact';
-import style from './style';
+import React from "react";
 import { usePrerenderData } from '@preact/prerender-data-provider';
+import "../../fonts/fonts.css"
+import { route } from 'preact-router';
+import Markdown from 'markdown-to-jsx';
 
-const photographs = (props) => {
-	const [data, isLoading] = usePrerenderData(props);
-	return (
-		<div class={style.pageContact}>
-			<h1 class={style.pageTitle}>Contact me</h1>
-			<div class={style.formWrapper}>
-				<p class={style.pageBody}>
-					<div>Hi!</div>
-					<div>If you are interested in my work and are looking to contact me for a contract please use the following form to contact me.</div>
-					<div>&nbsp;</div>
-					<div>Cheers 🍻</div>
-				</p>
-				<form name="contact" method="POST" data-netlify="true" action="/contact/success" data-netlify-honeypot="bot-field">
-					<input type="hidden" name="form-name" value="contact" />
-					<p>
-						<input type="text" name="name" placeholder="Name" required />
-					</p>
-					<p>
-						<input type="email" name="email" placeholder="E-Mail" required />
-					</p>
-					<p>
-						<textarea name="message" placeholder="Message" />
-					</p>
-					<p>
-						<button type="submit">Send</button>
-					</p>
-				</form>
+class Contact extends React.Component{
+	constructor( props ){
+		super();
+		const [data, isLoading] = usePrerenderData(props);
+		this.state = {
+			contact: data.contact
+		}
+	}
+
+	render(){
+		return(
+			<div className = "page page--contact">
+				<div className = "item">
+					<div className = "contact__text-wrapper">
+						<h1>{ this.state.contact.title }</h1>
+						<div className = "contact__markdown graphik">
+							<Markdown>
+								{
+									this.state.contact.body
+								}
+							</Markdown>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
-	);
-};
+		)
+	}
+}
 
-export default photographs;
+export default Contact;

@@ -4,6 +4,7 @@ const fs = require('fs');
 const { getStatement } = require('./src/crawler/getStatement.js');
 const { getProjects } = require('./src/crawler/getProjects.js');
 const { getAbout } = require( "./src/crawler/getAbout.js" )
+const { getContact } = require( "./src/crawler/getContact.js" )
 
 
 const content = 1;
@@ -11,6 +12,7 @@ const blogs = 1;
 const projects = getProjects( join( __dirname, "content" ) );
 const statement = getStatement( join( __dirname, "content" ) );
 const about = getAbout( join( __dirname, "content" ) );
+const contact = getContact( join( __dirname, "content" ) );
 
 let funky = () => {
 	const pages = [
@@ -22,7 +24,7 @@ let funky = () => {
 			projects: projects,
 			statement: statement,
 		},
-		{ url: '/contact/' },
+		{ url: '/contact/', contact: contact },
 		{ url: '/about/', about: about },
 		{ url: '/contact/success' },
 		{
