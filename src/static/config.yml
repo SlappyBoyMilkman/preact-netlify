@@ -50,3 +50,11 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Company", name: "company", widget: "markdown" }
       - { label: "dates", name: "dates", widget: "string" }
+
+  - name: "Contact"
+    label: "Contact"
+    folder: "content/contact"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
