@@ -23,6 +23,7 @@ let funky = () => {
 			statement: statement,
 		},
 		{ url: '/contact/' },
+		{ url: '/about/', about: about },
 		{ url: '/contact/success' },
 		{
 			url: '/work',

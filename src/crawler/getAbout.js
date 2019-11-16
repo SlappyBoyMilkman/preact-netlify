@@ -23,6 +23,25 @@ function sliceGood( data, pre, post ){
   return sliced
 }
 
+function getInternships( listings ){
+  return listings.map(
+    ( listing ) => {
+      let data = fs.readFileSync( listing, 'utf-8');
+      while( data.indexOf("---\n") !== -1 ){
+        data = data.replace( "---\n", "" )
+      }
+      let title = sliceGood( data, "title: ", "\n" )
+      let company = sliceGood( data, "company: ", "\n" )
+      let dates = slicePre( data, "dates: " )
+      return ({
+        title: title,
+        company: company,
+        dates: dates
+      })
+    }
+  )
+}
+
 function getAbout( source ){
   const isDirectory = source => fs.lstatSync(source).isDirectory();
   const isFile = source => !fs.lstatSync(source).isDirectory();
@@ -31,13 +50,13 @@ function getAbout( source ){
   let allContent = getAllListings(source);
   let statementFolder = getFolder( allContent, "/experience" )
   let internshipsFolder = getFolder( allContent, "/internships" )
+  let internshipsListings = getAllListings( internshipsFolder )
   let statementContents = getAllListings( statementFolder )
   const data = fs.readFileSync( statementContents[0], 'utf-8');
   let title = sliceGood( data, "title: ", "\n---" )
   let experience = slicePre( data, "title: " )
   experience = slicePre( experience, "---\n" )
-  let internships = ''
-  console.log( internshipsFolder )
+  let internships = getInternships( internshipsListings )
   return { experience: experience, title: title, internships: internships }
 }
 
