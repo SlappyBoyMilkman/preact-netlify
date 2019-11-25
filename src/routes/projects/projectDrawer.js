@@ -20,7 +20,7 @@ class ProjectDrawer extends React.Component{
       return({
         opacity: 1,
         transform: "translate( 0%, 0px )",
-        transitionDelay: ".6s",
+        transitionDelay: "all .6s",
         zIndex: 10
       })
     }else{
@@ -28,7 +28,9 @@ class ProjectDrawer extends React.Component{
         opacity: 0,
         transform: "translate( 0%, 50px )",
         transitionDelay: "0s",
-        zIndex: 1
+        zIndex: 1,
+        height: "0px",
+        overflow: "hidden"
       })
     }
   }

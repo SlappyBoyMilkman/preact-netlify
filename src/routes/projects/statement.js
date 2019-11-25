@@ -2,6 +2,7 @@ import React from "react";
 import Markdown from 'markdown-to-jsx';
 import { usePrerenderData } from '@preact/prerender-data-provider';
 import "../../fonts/fonts.css"
+import "../../assets/index.css"
 import { route } from 'preact-router';
 
 const $ = require( "jquery" )
@@ -17,7 +18,9 @@ class Statement extends React.Component{
 
   componentWillReceiveProps( props ){
     this.setState({
-      drawerOpen: props.drawerOpen
+      drawerOpen: props.drawerOpen,
+      windowWidth: props.windowWidth,
+      selectedProject: props.selectedProject
     })
   }
 
@@ -64,9 +67,17 @@ class Statement extends React.Component{
 
   }
 
+  getStyle(){
+    if( this.state.windowWidth < 768 && this.state.selectedProject ){
+      return({
+        display: "none"
+      })
+    }
+  }
+
   render(){
     return(
-      <div className = "statement">
+      <div className = "statement" style = { this.getStyle() }>
         <div className = "statement__text-wrapper" style = { this.getStyle() }>
           {
             this.title()

@@ -24,6 +24,15 @@ export class Project extends React.Component{
     }
   }
 
+  componentDidMount(){
+    this.__onResize()
+    window.onresize = this.__onResize.bind( this );
+  }
+
+  __onResize(){
+    this.setState({ windowWidth: window.innerWidth }, () => { console.log( this.state.windowWidth ) })
+  }
+
   getSelectedProject( project, projects ){
     let _project = undefined
     if( project ){
@@ -46,13 +55,15 @@ export class Project extends React.Component{
   }
 
   projects(){
-    return this.state.projects.map(
-      function( project, index ){
-        return(
-          <ProjectDrawer project = { project } selectedProject = { this.state.selectedProject } key = { `fucking-preact-${index}` }/>
-        )
-      }.bind( this )
-    )
+    if( this.state.windowWidth > 768 || this.state.selectedProject ){
+      return this.state.projects.map(
+        function( project, index ){
+          return(
+            <ProjectDrawer project = { project } selectedProject = { this.state.selectedProject } key = { `fucking-preact-${index}` }/>
+          )
+        }.bind( this )
+      )
+    }
   }
 
   getStyle(){
@@ -92,6 +103,20 @@ export class Project extends React.Component{
     }
   }
 
+  mobile(){
+    if( this.state.windowWidth >= 768 || this.state.selectedProject ){
+      return(
+        <div className = "project__drawer__wrapper">
+          <div className = "item">
+            {
+              this.projects()
+            }
+          </div>
+        </div>
+      )
+    }
+  }
+
   render(){
     return(
       <div className = "main">
@@ -99,17 +124,13 @@ export class Project extends React.Component{
           <div className = "grid grid__flex">
             <div className = "grid__item medium-up--one-half">
               <div className = "item">
-                <Statement statement = { this.state.statement } drawerOpen = { this.state.drawerOpen }/>
+                <Statement windowWidth = { this.state.windowWidth } selectedProject = { this.state.selectedProject } statement = { this.state.statement } drawerOpen = { this.state.drawerOpen }/>
               </div>
             </div>
             <div className = "grid__item medium-up--one-half">
-              <div className = "project__drawer__wrapper">
-                <div className = "item">
-                  {
-                    this.projects()
-                  }
-                </div>
-              </div>
+              {
+                this.mobile()
+              }
             </div>
           </div>
         </div>
