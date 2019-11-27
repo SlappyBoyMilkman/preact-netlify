@@ -1,18 +1,21 @@
 import React from "react";
 import Markdown from 'markdown-to-jsx';
 import "../../fonts/fonts.css"
+import Work from "../work/index.js"
 
 class ProjectDrawer extends React.Component{
   constructor( props ){
     super();
     this.state = {
       project: props.project,
-      selectedProject: props.selectedProject
+      projects: props.projects,
+      selectedProject: props.selectedProject,
+      windowWidth: props.windowWidth
     }
   }
 
   componentWillReceiveProps( props ){
-    this.setState({ project: props.project, selectedProject: props.selectedProject })
+    this.setState({ project: props.project, selectedProject: props.selectedProject, windowWidth: props.windowWidth })
   }
 
   getStyle(){
@@ -35,6 +38,14 @@ class ProjectDrawer extends React.Component{
     }
   }
 
+  links(){
+    if( this.state.windowWidth < 768 ){
+      return(
+        <Work projects = { this.state.projects } project = { this.state.project }/>
+      )
+    }
+  }
+
   render(){
     return(
       <div className = "project__drawer" style = { this.getStyle() }>
@@ -48,6 +59,9 @@ class ProjectDrawer extends React.Component{
             this.state.project.markdown
           }
         </Markdown>
+        {
+          this.links()
+        }
       </div>
 
     )

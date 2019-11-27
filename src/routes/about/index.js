@@ -1,5 +1,6 @@
 import { h } from 'preact';
 import React from "react";
+import Footer from "../../components/footer/index.js";
 import Markdown from 'markdown-to-jsx';
 import { usePrerenderData } from '@preact/prerender-data-provider';
 import "../../fonts/fonts.css"
@@ -44,6 +45,7 @@ class About extends React.Component{
               }
             </div>
           </div>
+          <Footer/>
         </div>
       </div>
     )

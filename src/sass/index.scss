@@ -29,6 +29,7 @@ $medium-down: 1150px;
   padding-top: 120px;
 }
 
+
 a{
   color: #01AC82;
   text-decoration: none;
@@ -199,6 +200,19 @@ header{
 .page--about{
   h2{
     font-size: 14px;
+    @media( max-width: 767px ){
+      font-size: 16px;
+    }
+  }
+}
+
+@keyframes copied{
+  0%{
+    opacity: 1;
+  }
+
+  100%{
+    opacity: 0;
   }
 }
 
@@ -221,6 +235,12 @@ header{
       position: absolute;
       bottom: -36px;
       left: 50%;
+      animation-name: copied;
+      animation-duration: 1s;
+      animation-delay: 1s;
+      animation-fill-mode: forwards;
+      animation-timing-function: forwards;
+      animation-iteration-count: 1;
       width: 120%;
       text-align: center;
       transform: translate( -50%, 0px );
@@ -302,5 +322,24 @@ header{
     background-color: transparent;
     padding-bottom: 100px;
     height: auto;
+    @media( max-width: 767px ){
+      transition: 0s !important
+    }
   }
+}
+
+.internship {
+    margin-top: 30px;
+}
+
+.footer{
+  margin-top: 65px;
+  a{
+    float: left;
+    clear: both;
+    margin-top: 10px;
+  }
+
+  padding-bottom: 120px;
+  float: left;
 }

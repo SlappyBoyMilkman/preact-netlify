@@ -27,6 +27,9 @@ class Contact extends React.Component{
 		 document.execCommand("copy");
 		 $temp.remove();
 		 this.setState({ copied: true })
+		 window.setTimeout(
+			 () => { this.setState({ copied: false }) }, 2000
+		 )
 	}
 
 

@@ -59,7 +59,7 @@ export class Project extends React.Component{
       return this.state.projects.map(
         function( project, index ){
           return(
-            <ProjectDrawer project = { project } selectedProject = { this.state.selectedProject } key = { `fucking-preact-${index}` }/>
+            <ProjectDrawer windowWidth = { this.state.windowWidth } projects = { this.state.projects } project = { project } selectedProject = { this.state.selectedProject } key = { `fucking-preact-${index}` }/>
           )
         }.bind( this )
       )
