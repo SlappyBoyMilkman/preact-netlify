@@ -20,8 +20,10 @@ class About extends React.Component{
     return this.state.about.internships.map(
       ( internship, index ) => { return(
         <div className = "internship">
-          <Markdown>{ internship.company }</Markdown>
-          <p className = "graphik-italic"> { internship.dates } </p>
+          <div className = "graphik-italic">
+            <Markdown>{ internship.company }</Markdown>
+          </div>
+          <p className = "graphik-regular-italic font-body"> { internship.dates } </p>
         </div>
       ) }
     )
@@ -31,6 +33,7 @@ class About extends React.Component{
     return(
       <div className = "page page--about">
         <div className = "wrap">
+          <h1 className = "page-title__mobile">About</h1>
           <div className = "grid">
             <div className = "grid__item medium-up--one-half">
               <h2 className = "akkurat">{ this.state.about.title }</h2>

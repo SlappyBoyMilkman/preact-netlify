@@ -29,8 +29,20 @@ export class Project extends React.Component{
     window.onresize = this.__onResize.bind( this );
   }
 
+  componentWillUnMount(){
+  }
+
   __onResize(){
     this.setState({ windowWidth: window.innerWidth }, () => { console.log( this.state.windowWidth ) })
+  }
+
+  statement(){
+    debugger
+    if( this.state.windowWidth > 768 || !this.state.selectedProject ){
+      return(
+        <Statement windowWidth = { this.state.windowWidth } selectedProject = { this.state.selectedProject } statement = { this.state.statement } drawerOpen = { this.state.drawerOpen }/>
+      )
+    }
   }
 
   getSelectedProject( project, projects ){
@@ -124,7 +136,9 @@ export class Project extends React.Component{
           <div className = "grid grid__flex">
             <div className = "grid__item medium-up--one-half">
               <div className = "item">
-                <Statement windowWidth = { this.state.windowWidth } selectedProject = { this.state.selectedProject } statement = { this.state.statement } drawerOpen = { this.state.drawerOpen }/>
+                {
+                  this.statement()
+                }
               </div>
             </div>
             <div className = "grid__item medium-up--one-half">

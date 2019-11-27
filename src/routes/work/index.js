@@ -1,5 +1,6 @@
 import { h } from 'preact';
 import React from "react";
+import Footer from "../../components/footer/index.js";
 import { usePrerenderData } from '@preact/prerender-data-provider';
 import { Link } from 'preact-router/match';
 import "../../fonts/fonts.css"
@@ -21,6 +22,8 @@ class Work extends React.Component{
       }
     }
   }
+
+
 
   leftSideProjects(){
     return this.state.projects.filter( ( project ) => { return project.left } ).map(
@@ -64,6 +67,7 @@ class Work extends React.Component{
     )
   }
 
+
   inner(){
     if( this.state.project ){
       return(
@@ -84,6 +88,7 @@ class Work extends React.Component{
       return(
         <div className = "page">
           <div className = "wrap">
+            <h1 className = "page-title__mobile">Work</h1>
             <div className = "grid">
               <div className = "grid__item medium-up--one-half">
                 {
@@ -96,6 +101,7 @@ class Work extends React.Component{
                 }
               </div>
             </div>
+            <Footer/>
           </div>
         </div>
       )

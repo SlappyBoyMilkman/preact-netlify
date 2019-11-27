@@ -24,8 +24,6 @@ class Statement extends React.Component{
     })
   }
 
-  componentDidMount(){
-  }
 
   title(){
     if( this.state.statement.title ){

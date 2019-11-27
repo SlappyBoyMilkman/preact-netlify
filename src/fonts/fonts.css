@@ -19,6 +19,16 @@
 }
 
 @font-face{
+  font-family: 'graphik-regular';
+  src: local("graphik.otf"), url("./Graphik-Regular.woff");
+}
+
+@font-face{
+  font-family: 'graphik-regular-italic';
+  src: local("graphik.otf"), url("./Graphik-RegularItalic.woff");
+}
+
+@font-face{
   font-family: 'akkurat';
   src: local("graphik.otf"), url("./AkkuratMono-Regular.woff2");
 }
@@ -42,8 +52,23 @@
   font-family: "graphik-medium"
 }
 
+
+
 .graphik-regular{
   font-family: "graphik-regular"
+}
+
+.graphik-regular-italic{
+  font-family: "graphik-regular-italic";
+}
+
+.graphik-regular-italic.font-body{
+  font-size: 14px;
+}
+
+.internship a{
+  font-family: "graphik-regular-italic";
+  font-size: 14px;
 }
 
 .graphik-description{

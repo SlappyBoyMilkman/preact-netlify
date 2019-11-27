@@ -38,6 +38,9 @@ a{
 
 .work-item{
   margin-top: 30px;
+  @media( max-width: 768px){
+    text-transform: uppercase;
+  }
   a{
     color: #01AC82;
     font-size: 14px;
@@ -170,9 +173,7 @@ body{
 
 .header__righthand-nav{
   position: absolute;
-  @media( max-width: $medium-down){
-    position: fixed;
-  }
+
   float: right;
   width: 100%;
   pointer-events: none;
@@ -329,7 +330,13 @@ header{
 }
 
 .internship {
-    margin-top: 30px;
+    margin-top: 25px;
+    p{
+      margin: 0px;
+      margin-top: 6px;
+    }
+    a{
+    }
 }
 
 .footer{
@@ -338,8 +345,21 @@ header{
     float: left;
     clear: both;
     margin-top: 10px;
+    color: #01AC82;
   }
 
   padding-bottom: 120px;
   float: left;
+  display: none;
+  @media( max-width: 768px){
+    display: block;
+  }
+}
+
+.page-title__mobile{
+  display: none;
+  @media( max-width: 768px){
+    display: block;
+  }
+
 }
