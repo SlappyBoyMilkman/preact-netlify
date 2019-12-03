@@ -290,4 +290,8 @@ header {
     .page-title__mobile {
       display: block; } }
 
+.markdown-division {
+  margin-top: 60px;
+  display: block; }
+
 /*# sourceMappingURL=index.css.map */

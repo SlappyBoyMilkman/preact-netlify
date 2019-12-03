@@ -48,21 +48,23 @@ class Statement extends React.Component{
   assignRef( ref ){
     let a = $( ref ).find( "a" )
     a.on( "mouseenter", function( anchor ){
-      let jqAnchor = $( anchor.target )
-      let html = anchor.target.outerHTML
-      let first = html.slice( html.indexOf('href="') + 6 )
-      let string = first.slice( 0, first.indexOf(".md") + 3 )
-      route( string )
-      window.scrollTo( 0, 0 )
-      jqAnchor.addClass("hover")
+      if( window.innerWidth > 767 ){
+        let jqAnchor = $( anchor.target )
+        let html = anchor.target.outerHTML
+        let first = html.slice( html.indexOf('href="') + 6 )
+        let string = first.slice( 0, first.indexOf(".md") + 3 )
+        route( string )
+        window.scrollTo( 0, 0 )
+        jqAnchor.addClass("hover")
+      }
     })
 
     a.on( "mouseleave", function( anchor ){
-      let jqAnchor = $( anchor.target )
-      jqAnchor.removeClass("hover")
+      if( window.innerWidth > 767 ){
+        let jqAnchor = $( anchor.target )
+        jqAnchor.removeClass("hover")
+      }
     })
-
-
   }
 
   getStyle(){

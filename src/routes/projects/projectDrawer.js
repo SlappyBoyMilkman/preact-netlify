@@ -63,11 +63,13 @@ class ProjectDrawer extends React.Component{
         <div className = "selectedProject__description">
           <p className = "graphik graphik-description">{ this.state.project.details }</p>
         </div>
-        <Markdown>
+        <div className = "project__drawer__markdown">
+          <Markdown>
           {
             this.state.project.markdown
           }
-        </Markdown>
+          </Markdown>
+        </div>
         {
           this.links()
         }

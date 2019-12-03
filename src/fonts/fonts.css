@@ -105,9 +105,19 @@ a:hover:after{
   position: absolute;
   content: " ";
   bottom: -5px;
-  height: 5px;
-  background-image: url( "../assets/wave.png" );
+  height: 4px;
+  background-image: url( "../assets/squig.png" );
   background-size: auto 100%;
   width: 100%;
   left: 0px;
+}
+
+.project__drawer__markdown{
+  font-family: "graphik-regular";
+  font-size: 14px;
+
+}
+
+.project__drawer__markdown p:first-child{
+  margin-top: 60px;
 }

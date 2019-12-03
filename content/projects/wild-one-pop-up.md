@@ -35,17 +35,13 @@ lefthand: true
 ![](/assets/ferrante_design_wild_one_store_012.jpg)
 
 ![](/assets/ferrante_design_wild_one_store_013.jpg)
+<span className = "markdown-division"/>
+Fabrication <br/> Bunker Hill Fabrication
 
-Fabrication  Bunker Hill Fabrication
+Mural artist <br/> Marleigh Culver
 
+Plants <br/> [Rooted](https://rooted.nyc/)
 
+Photo <br/> [Andy Romer](http://www.romerphoto.com/)
 
-Mural artist  Marleigh Culver
-
-
-
-Plants  [Rooted](https://rooted.nyc/)
-
-
-
-Photo  [Andy Romer](http://www.romerphoto.com/)    Press  [Dezeen](https://www.dezeen.com/2018/11/01/new-york-city-pop-up-shops-design-gifts/)
+Press <br/> [Dezeen](https://www.dezeen.com/2018/11/01/new-york-city-pop-up-shops-design-gifts/)

@@ -78,6 +78,8 @@ class Work extends React.Component{
   inner(){
     if( this.state.project ){
       return(
+        <div>
+        <h1 className = "page-title__mobile" style = {{ marginTop: "120px" }}>Other Projects</h1>
         <div className = "grid">
           <div className = "grid__item medium-up--one-half">
             {
@@ -90,22 +92,28 @@ class Work extends React.Component{
             }
           </div>
         </div>
+        </div>
       )
     }else if( this.state.context && this.state.context === "home" ){
-      return(
-        <div className = "grid">
-        <div className = "grid__item medium-up--one-half">
-        {
-          this.leftSideProjects()
-        }
-        </div>
-        <div className = "grid__item medium-up--one-half">
-        {
-          this.rightSideProjects()
-        }
-        </div>
-        </div>
-      )
+      // return(
+      //   <div>
+      //     <div className = "grid">
+      //       <div className = "grid__item one-whole">
+      //         <h1 className = "page-title__mobile" style = {{ paddingTop: "120px" }}>Other Projects</h1>
+      //       </div>
+      //       <div className = "grid__item medium-up--one-half">
+      //         {
+      //           this.leftSideProjects()
+      //         }
+      //       </div>
+      //       <div className = "grid__item medium-up--one-half">
+      //         {
+      //           this.rightSideProjects()
+      //         }
+      //       </div>
+      //     </div>
+      //   </div>
+      // )
     }else{
       return(
         <div className = "page">
