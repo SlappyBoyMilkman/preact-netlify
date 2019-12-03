@@ -44,8 +44,8 @@ Mural artist  Marleigh Culver
 
 
 
-Plants  Rooted
+Plants  [Rooted](https://rooted.nyc/)
 
 
 
-Photo  Andy Romer    Press  [Dezeen](https://www.dezeen.com/2018/11/01/new-york-city-pop-up-shops-design-gifts/)
+Photo  [Andy Romer](http://www.romerphoto.com/)    Press  [Dezeen](https://www.dezeen.com/2018/11/01/new-york-city-pop-up-shops-design-gifts/)
