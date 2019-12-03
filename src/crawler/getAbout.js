@@ -32,6 +32,7 @@ function getInternships( listings ){
       }
       let title = sliceGood( data, "title: ", "\n" )
       let company = sliceGood( data, "company: ", "\n" )
+ 			company = company.slice( 1, company.length - 1 );
       let dates = slicePre( data, "dates: " )
       return ({
         title: title,

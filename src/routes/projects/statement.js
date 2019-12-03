@@ -2,6 +2,7 @@ import React from "react";
 import Markdown from 'markdown-to-jsx';
 import { usePrerenderData } from '@preact/prerender-data-provider';
 import "../../fonts/fonts.css"
+import "../../assets/index.css"
 import { route } from 'preact-router';
 
 const $ = require( "jquery" )
@@ -17,12 +18,12 @@ class Statement extends React.Component{
 
   componentWillReceiveProps( props ){
     this.setState({
-      drawerOpen: props.drawerOpen
+      drawerOpen: props.drawerOpen,
+      windowWidth: props.windowWidth,
+      selectedProject: props.selectedProject
     })
   }
 
-  componentDidMount(){
-  }
 
   title(){
     if( this.state.statement.title ){
@@ -47,26 +48,36 @@ class Statement extends React.Component{
   assignRef( ref ){
     let a = $( ref ).find( "a" )
     a.on( "mouseenter", function( anchor ){
-      let jqAnchor = $( anchor.target )
-      let html = anchor.target.outerHTML
-      let first = html.slice( html.indexOf('href="') + 6 )
-      let string = first.slice( 0, first.indexOf(".md") + 3 )
-      route( string )
-      window.scrollTo( 0, 0 )
-      jqAnchor.addClass("hover")
+      if( window.innerWidth > 767 ){
+        let jqAnchor = $( anchor.target )
+        let html = anchor.target.outerHTML
+        let first = html.slice( html.indexOf('href="') + 6 )
+        let string = first.slice( 0, first.indexOf(".md") + 3 )
+        route( string )
+        window.scrollTo( 0, 0 )
+        jqAnchor.addClass("hover")
+      }
     })
 
     a.on( "mouseleave", function( anchor ){
-      let jqAnchor = $( anchor.target )
-      jqAnchor.removeClass("hover")
+      if( window.innerWidth > 767 ){
+        let jqAnchor = $( anchor.target )
+        jqAnchor.removeClass("hover")
+      }
     })
+  }
 
-
+  getStyle(){
+    if( this.state.windowWidth < 768 && this.state.selectedProject ){
+      return({
+        display: "none"
+      })
+    }
   }
 
   render(){
     return(
-      <div className = "statement">
+      <div className = "statement" style = { this.getStyle() }>
         <div className = "statement__text-wrapper" style = { this.getStyle() }>
           {
             this.title()

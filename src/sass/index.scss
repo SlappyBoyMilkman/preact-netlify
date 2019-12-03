@@ -1,15 +1,21 @@
-$gutter: 150px;
+$gutter: 180px;
 $start-top: 150px;
 $padding-images: 10px;
+$medium-down: 1150px;
 
 .wrap{
   padding: 0px $gutter;
 }
 
+
+
 .grid{
-  &.grid__flex{
+  &.medium-up--grid__flex{
     display: flex;
     flex-direction: column;
+    @media( max-width: 768px ){
+      display: block;
+    }
   }
   margin-left: -$gutter;
   .grid__item{
@@ -26,6 +32,7 @@ $padding-images: 10px;
   padding-top: 120px;
 }
 
+
 a{
   color: #01AC82;
   text-decoration: none;
@@ -34,6 +41,9 @@ a{
 
 .work-item{
   margin-top: 30px;
+  @media( max-width: 768px){
+    text-transform: uppercase;
+  }
   a{
     color: #01AC82;
     font-size: 14px;
@@ -55,7 +65,14 @@ a{
   padding-left: $gutter;
   top: 140px;
   left: 0px;
-  width: 50vw;
+  width: 47vw;
+  @media( max-width: 757px ){
+    position: relative;
+    top: initial;
+    margin-top: 120px;
+    padding: 0px;
+    width: 100%;
+  }
   box-sizing: border-box;
   padding-right: 40px;
   &:hover{
@@ -64,13 +81,13 @@ a{
     }
   }
   h1{
-    font-size: 2.4vw;
+    font-size: 2.0vw;
     letter-spacing: .015em;
   }
 
   p{
     line-height: 1.8em;
-    font-size: 1.2vw;
+    font-size: 1.0vw;
     letter-spacing: .01em;
     color: #0A6655;
   }
@@ -106,6 +123,7 @@ p, h1, h2, h3{
 
 body{
   background-color: #F6F2ED;
+  margin: 30px 0px;
 }
 
 .project__drawer__wrapper{
@@ -115,6 +133,11 @@ body{
   width: 100%;
   width: 50vw;
   left: 50vw;
+  @media( max-width: 757px ){
+    left: 0vw;
+    width: 100vw;
+    padding: 0px $gutter;
+  }
   height: 100%;
   box-sizing: border-box;
   .item{
@@ -130,12 +153,15 @@ body{
 .project__drawer{
   position: absolute;
   top: 0px;
-  height: 100vh;
   padding: 0px $padding-images;
   box-sizing: border-box;
   width: 100%;
+  margin-bottom: 120px;
+  @media( max-width: 757px){
+    margin-bottom: 0px;
+  }
   background-color: #F8F8F5;
-  transition: opacity .4s, transform .4s;
+  transition: opacity .4s, transform .4s, height .4s linear 1s;
   z-index: 2;
 
   img{
@@ -155,7 +181,23 @@ body{
 }
 
 .header__lefthand-nav{
-  float: left;
+  position: fixed;
+  @media( max-width: 757px ){
+    position: absolute;
+  }
+}
+
+.header__righthand-nav{
+  position: absolute;
+
+  float: right;
+  width: 100%;
+  pointer-events: none;
+  nav{
+    pointer-events: painted;
+    float: right;
+    right: 0px;
+  }
 }
 
 .header__nav{
@@ -167,7 +209,7 @@ body{
 }
 
 header{
-  position: fixed;
+  position: absolute;
   width: 100%;
   z-index: 15;
   color: #01AC82;
@@ -176,6 +218,19 @@ header{
 .page--about{
   h2{
     font-size: 14px;
+    @media( max-width: 767px ){
+      font-size: 16px;
+    }
+  }
+}
+
+@keyframes copied{
+  0%{
+    opacity: 1;
+  }
+
+  100%{
+    opacity: 0;
   }
 }
 
@@ -194,5 +249,153 @@ header{
     max-width: 400px;
     margin: 50px auto;
     font-size: 14px;
+    .copied_text{
+      position: absolute;
+      bottom: -36px;
+      left: 50%;
+      animation-name: copied;
+      animation-duration: 1s;
+      animation-delay: 1s;
+      animation-fill-mode: forwards;
+      animation-timing-function: forwards;
+      animation-iteration-count: 1;
+      width: 120%;
+      text-align: center;
+      transform: translate( -50%, 0px );
+      display: none;
+    }
+
   }
+  .contact__markdown.copied{
+    .copied_text{
+      display: block;
+    }
+  }
+}
+
+
+@media( max-width: $medium-down ) and ( min-width: 768px ){
+  $gutter: 100px;
+  $gutter-wrap: 10vw;
+  .project__drawer__wrapper{
+    pointer-events: none;
+  }
+
+  .statement{
+    padding-left: $gutter-wrap;
+    width: 48vw;
+
+
+    max-width: 500px;
+
+    h1{
+      font-size: 24px;
+    }
+    p{
+      font-size: 12px;
+    }
+  }
+
+  .project__drawer__wrapper{
+    padding: 0px $gutter;
+    padding-right: $gutter-wrap;
+  }
+
+  .wrap{
+    padding: 0px $gutter-wrap;
+  }
+
+  .project__drawer__wrapper{
+    padding-left: 0px;
+  }
+}
+
+@media( max-width: 767px ){
+  $gutter: 40px;
+  .wrap, .project__drawer__wrapper{
+    padding: 0px $gutter;
+  }
+  .contact__text-wrapper{
+    width: 100%;
+    max-width: 500px;
+    padding: 0px $gutter;
+    box-sizing: border-box;
+    position: initial;
+    transform: initial;
+    margin: 0px auto;
+  }
+  h1{
+    margin-top: 0px;
+  }
+  .statement{
+    width: 100%;
+    padding: 0px;
+    h1{
+      font-size: 32px;
+      margin-top: 0px;
+    }
+    p{
+      font-size: 14px;
+    }
+  }
+  .grid{
+      .grid__item.medium-up--one-half{
+      width: 100%;
+    }
+  }
+  .project__drawer__wrapper{
+    pointer-events: painted;
+    width: 100vw;
+    left: 0px;
+  }
+
+  .project__drawer{
+    padding: 0px;
+    background-color: transparent;
+    height: auto;
+    @media( max-width: 767px ){
+      transition: 0s !important
+    }
+  }
+}
+
+.internship {
+    margin-top: 25px;
+    p{
+      margin: 0px;
+      margin-top: 6px;
+    }
+    a{
+    }
+}
+
+.footer{
+  margin-top: 65px;
+  a{
+    float: left;
+    clear: both;
+    margin-top: 10px;
+    color: #01AC82;
+  }
+
+  padding-bottom: 120px;
+  float: left;
+  display: none;
+  @media( max-width: 768px){
+    display: block;
+  }
+}
+
+.page-title__mobile{
+  display: none;
+  @media( max-width: 768px){
+    display: block;
+  }
+
+}
+
+.project__drawer__markdown{}
+.markdown-division{
+  margin-top: 60px;
+  display: block;
 }
