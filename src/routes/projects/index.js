@@ -3,6 +3,8 @@ import React from "react";
 import { usePrerenderData } from '@preact/prerender-data-provider';
 import Statement from "./statement"
 import ProjectDrawer from "./projectDrawer"
+import Footer from "../../components/footer/index.js"
+import Work from "../work/index.js"
 import { route } from 'preact-router';
 
 export class Project extends React.Component{
@@ -37,7 +39,6 @@ export class Project extends React.Component{
   }
 
   statement(){
-    debugger
     if( this.state.windowWidth > 768 || !this.state.selectedProject ){
       return(
         <Statement windowWidth = { this.state.windowWidth } selectedProject = { this.state.selectedProject } statement = { this.state.statement } drawerOpen = { this.state.drawerOpen }/>
@@ -129,11 +130,27 @@ export class Project extends React.Component{
     }
   }
 
+  footer(){
+    if( this.state.windowWidth < 768 && !this.state.selectedProject ){
+      return(
+        <Footer/>
+      )
+    }
+  }
+
+  work(){
+    if( this.state.windowWidth < 768 && !this.state.selectedProject ){
+      return(
+        <Work projects = { this.state.projects } context = { "home" }/>
+      )
+    }
+  }
+
   render(){
     return(
       <div className = "main">
         <div className = "wrap">
-          <div className = "grid grid__flex">
+          <div className = "grid medium-up--grid__flex">
             <div className = "grid__item medium-up--one-half">
               <div className = "item">
                 {
@@ -141,12 +158,19 @@ export class Project extends React.Component{
                 }
               </div>
             </div>
+
             <div className = "grid__item medium-up--one-half">
               {
                 this.mobile()
               }
             </div>
           </div>
+          {
+            this.work()
+          }
+          {
+            this.footer()
+          }
         </div>
       </div>
     )

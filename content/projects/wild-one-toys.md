@@ -7,7 +7,7 @@ description: >-
   assortment of toys. Alongside the lead industrial designer, I built a product
   strategy that highlights Wild One's clean, minimalistic aesthetic and applied
   it to each of the product categories. We started with simple shapes and lines,
-  and came out with the Bolt Bite, the Twist Toss, and the Shape Tug --- simple
+  and came out with the Bolt Bite, the Twist Toss, and the Shape Tug — simple
   objects with intuitive function that are downright fun to play with.
 lefthand: true
 ---

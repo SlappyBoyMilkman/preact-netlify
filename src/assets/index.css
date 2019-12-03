@@ -3,9 +3,12 @@
 
 .grid {
   margin-left: -180px; }
-  .grid.grid__flex {
+  .grid.medium-up--grid__flex {
     display: flex;
     flex-direction: column; }
+    @media (max-width: 768px) {
+      .grid.medium-up--grid__flex {
+        display: block; } }
   .grid .grid__item {
     float: left;
     box-sizing: border-box;
@@ -47,6 +50,13 @@ a {
   width: 47vw;
   box-sizing: border-box;
   padding-right: 40px; }
+  @media (max-width: 757px) {
+    .statement {
+      position: relative;
+      top: initial;
+      margin-top: 120px;
+      padding: 0px;
+      width: 100%; } }
   .statement:hover .statement__text-wrapper {
     opacity: 1 !important; }
   .statement h1 {
@@ -99,13 +109,16 @@ body {
 .project__drawer {
   position: absolute;
   top: 0px;
-  height: 100vh;
   padding: 0px 10px;
   box-sizing: border-box;
   width: 100%;
+  margin-bottom: 120px;
   background-color: #F8F8F5;
   transition: opacity .4s, transform .4s, height .4s linear 1s;
   z-index: 2; }
+  @media (max-width: 757px) {
+    .project__drawer {
+      margin-bottom: 0px; } }
   .project__drawer img {
     width: 100%;
     height: auto; }
@@ -121,6 +134,9 @@ body {
 
 .header__lefthand-nav {
   position: fixed; }
+  @media (max-width: 757px) {
+    .header__lefthand-nav {
+      position: absolute; } }
 
 .header__righthand-nav {
   position: absolute;
@@ -129,7 +145,8 @@ body {
   pointer-events: none; }
   .header__righthand-nav nav {
     pointer-events: painted;
-    float: right; }
+    float: right;
+    right: 0px; }
 
 .header__nav {
   float: right;
@@ -210,11 +227,24 @@ header {
   .wrap, .project__drawer__wrapper {
     padding: 0px 40px; }
 
+  .contact__text-wrapper {
+    width: 100%;
+    max-width: 500px;
+    padding: 0px 40px;
+    box-sizing: border-box;
+    position: initial;
+    transform: initial;
+    margin: 0px auto; }
+
+  h1 {
+    margin-top: 0px; }
+
   .statement {
-    width: 100vw;
-    padding: 0px 40px; }
+    width: 100%;
+    padding: 0px; }
     .statement h1 {
-      font-size: 32px; }
+      font-size: 32px;
+      margin-top: 0px; }
     .statement p {
       font-size: 14px; }
 
@@ -229,7 +259,6 @@ header {
   .project__drawer {
     padding: 0px;
     background-color: transparent;
-    padding-bottom: 100px;
     height: auto; } }
   @media (max-width: 767px) and (max-width: 767px) {
     .project__drawer {

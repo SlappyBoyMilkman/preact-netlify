@@ -10,9 +10,12 @@ $medium-down: 1150px;
 
 
 .grid{
-  &.grid__flex{
+  &.medium-up--grid__flex{
     display: flex;
     flex-direction: column;
+    @media( max-width: 768px ){
+      display: block;
+    }
   }
   margin-left: -$gutter;
   .grid__item{
@@ -63,6 +66,13 @@ a{
   top: 140px;
   left: 0px;
   width: 47vw;
+  @media( max-width: 757px ){
+    position: relative;
+    top: initial;
+    margin-top: 120px;
+    padding: 0px;
+    width: 100%;
+  }
   box-sizing: border-box;
   padding-right: 40px;
   &:hover{
@@ -143,10 +153,13 @@ body{
 .project__drawer{
   position: absolute;
   top: 0px;
-  height: 100vh;
   padding: 0px $padding-images;
   box-sizing: border-box;
   width: 100%;
+  margin-bottom: 120px;
+  @media( max-width: 757px){
+    margin-bottom: 0px;
+  }
   background-color: #F8F8F5;
   transition: opacity .4s, transform .4s, height .4s linear 1s;
   z-index: 2;
@@ -169,6 +182,9 @@ body{
 
 .header__lefthand-nav{
   position: fixed;
+  @media( max-width: 757px ){
+    position: absolute;
+  }
 }
 
 .header__righthand-nav{
@@ -180,6 +196,7 @@ body{
   nav{
     pointer-events: painted;
     float: right;
+    right: 0px;
   }
 }
 
@@ -268,6 +285,7 @@ header{
     padding-left: $gutter-wrap;
     width: 48vw;
 
+
     max-width: 500px;
 
     h1{
@@ -297,11 +315,24 @@ header{
   .wrap, .project__drawer__wrapper{
     padding: 0px $gutter;
   }
-  .statement{
-    width: 100vw;
+  .contact__text-wrapper{
+    width: 100%;
+    max-width: 500px;
     padding: 0px $gutter;
+    box-sizing: border-box;
+    position: initial;
+    transform: initial;
+    margin: 0px auto;
+  }
+  h1{
+    margin-top: 0px;
+  }
+  .statement{
+    width: 100%;
+    padding: 0px;
     h1{
       font-size: 32px;
+      margin-top: 0px;
     }
     p{
       font-size: 14px;
@@ -321,7 +352,6 @@ header{
   .project__drawer{
     padding: 0px;
     background-color: transparent;
-    padding-bottom: 100px;
     height: auto;
     @media( max-width: 767px ){
       transition: 0s !important

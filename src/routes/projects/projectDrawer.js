@@ -2,6 +2,7 @@ import React from "react";
 import Markdown from 'markdown-to-jsx';
 import "../../fonts/fonts.css"
 import Work from "../work/index.js"
+import Footer from "../../components/footer/index.js"
 
 class ProjectDrawer extends React.Component{
   constructor( props ){
@@ -46,6 +47,14 @@ class ProjectDrawer extends React.Component{
     }
   }
 
+  footer(){
+    if( this.state.windowWidth < 768 ){
+      return(
+        <Footer/>
+      )
+    }
+  }
+
   render(){
     return(
       <div className = "project__drawer" style = { this.getStyle() }>
@@ -61,6 +70,9 @@ class ProjectDrawer extends React.Component{
         </Markdown>
         {
           this.links()
+        }
+        {
+          this.footer()
         }
       </div>
 

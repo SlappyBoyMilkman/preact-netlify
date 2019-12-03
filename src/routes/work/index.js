@@ -11,9 +11,16 @@ class Work extends React.Component{
   constructor( props ){
     super();
     if( props.projects ){
-      this.state = {
-        projects: props.projects,
-        project: props.project
+      if( props.project ){
+        this.state = {
+          projects: props.projects,
+          project: props.project
+        }
+      }else{
+        this.state = {
+          projects: props.projects,
+          context: props.context
+        }
       }
     }else{
       const [data, isLoading] = usePrerenderData(props);
@@ -82,6 +89,21 @@ class Work extends React.Component{
               this.rightSideProjects()
             }
           </div>
+        </div>
+      )
+    }else if( this.state.context && this.state.context === "home" ){
+      return(
+        <div className = "grid">
+        <div className = "grid__item medium-up--one-half">
+        {
+          this.leftSideProjects()
+        }
+        </div>
+        <div className = "grid__item medium-up--one-half">
+        {
+          this.rightSideProjects()
+        }
+        </div>
         </div>
       )
     }else{
