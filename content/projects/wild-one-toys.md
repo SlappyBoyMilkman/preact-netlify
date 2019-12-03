@@ -7,26 +7,30 @@ description: >-
   assortment of toys. Alongside the lead industrial designer, I built a product
   strategy that highlights Wild One's clean, minimalistic aesthetic and applied
   it to each of the product categories. We started with simple shapes and lines,
-  and came out with the Bolt Bite, the Twist Toss, and the Shape Tug — simple
+  and came out with the Bolt Bite, the Twist Toss, and the Shape Tug --- simple
   objects with intuitive function that are downright fun to play with.
 lefthand: true
 ---
-![](/assets/ferrante_design_wild_one_toys_001.jpg)
+![](/assets/cody-black-nm89mzvar5i-unsplash.jpg)
 
-![](/assets/ferrante_design_wild_one_toys_002.jpg)
+![](/assets/2.png)
 
-![](/assets/ferrante_design_wild_one_toys_003.jpg)
+Lead Industrial Designer  [Chris Santone](https://verygreat.nyc/)
 
-![](/assets/ferrante_design_wild_one_toys_004.jpg)
 
-![](/assets/ferrante_design_wild_one_toys_005.jpg)
 
-![](/assets/ferrante_design_wild_one_toys_006.jpg)
+VM Director  [Scott Bleicher](https://verygreat.nyc/)
 
-![](/assets/ferrante_design_wild_one_toys_007.jpg)
 
-![](/assets/ferrante_design_wild_one_toys_008.jpg)
 
-![](/assets/ferrante_design_wild_one_toys_009.jpg)
+Photographer  [Sam Liebeskind](https://verygreat.nyc/)
 
-![](/assets/ferrante_design_wild_one_toys_010.jpg)
+
+
+Retouching  [Kate Edwards](https://verygreat.nyc/)
+
+
+
+
+
+Press  [Dwell](https://www.dwell.com/article/wild-one-modern-pet-toys-4e58c5a6)  [Dogmilk](https://dog-milk.com/stylish-dog-toys-from-wild-one/?utm_source=dlvr.it&utm_medium=twitter)
