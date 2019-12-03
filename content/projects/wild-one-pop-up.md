@@ -36,9 +36,9 @@ lefthand: true
 
 ![](/assets/ferrante_design_wild_one_store_013.jpg)
 <span className = "markdown-division"/>
-Fabrication <br/> Bunker Hill Fabrication
+Fabrication <br/> [Bunker Hill Fabrication](https://www.bunkerhillfabrication.com/)
 
-Mural artist <br/> Marleigh Culver
+Mural artist <br/> [Marleigh Culver](https://www.marleighculver.com/)
 
 Plants <br/> [Rooted](https://rooted.nyc/)
 
