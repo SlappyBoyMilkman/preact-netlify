@@ -14,3 +14,23 @@ lefthand: true
 ![](/assets/cody-black-nm89mzvar5i-unsplash.jpg)
 
 ![](/assets/2.png)
+
+Lead Industrial Designer  [Chris Santone](https://verygreat.nyc/)
+
+
+
+VM Director  [Scott Bleicher](https://verygreat.nyc/)
+
+
+
+Photographer  [Sam Liebeskind](https://verygreat.nyc/)
+
+
+
+Retouching  [Kate Edwards](https://verygreat.nyc/)
+
+
+
+
+
+Press  [Dwell](https://www.dwell.com/article/wild-one-modern-pet-toys-4e58c5a6)  [Dogmilk](https://dog-milk.com/stylish-dog-toys-from-wild-one/?utm_source=dlvr.it&utm_medium=twitter)
