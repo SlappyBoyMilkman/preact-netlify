@@ -91,6 +91,13 @@
   font-family: "akkurat";
 }
 
+.akkurat-medium{
+  font-family: "akkurat";
+  font-size: 20px;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+}
+
 .graphik-body{
   font-size: 14px;
   line-height: 1.8em;

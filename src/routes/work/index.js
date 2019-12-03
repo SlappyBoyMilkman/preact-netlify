@@ -79,7 +79,7 @@ class Work extends React.Component{
     if( this.state.project ){
       return(
         <div>
-        <h1 className = "page-title__mobile" style = {{ marginTop: "120px" }}>Other Projects</h1>
+        <h1 className = "akkurat-medium" style = {{ marginTop: "120px" }}>Other Projects</h1>
         <div className = "grid">
           <div className = "grid__item medium-up--one-half">
             {
