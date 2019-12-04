@@ -94,12 +94,9 @@
 .graphik-body{
   font-size: 14px;
   line-height: 1.8em;
-  color: #0A6655;
 }
 
-.graphik-body a{
-  color: #01AC82;
-}
+
 
 a:hover:after{
   position: absolute;
