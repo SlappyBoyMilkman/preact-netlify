@@ -59,11 +59,12 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
 
-  - name: "SiteColors"
-    label: "SiteColors"
+  - name: "Colors"
+    label: "Colors"
     folder: "content/sitecolors"
     create: true
     fields:
+      - { label: "Title", name: "title", widget: "string" }
       - { label: "Link Color", name: "color1", widget: "string" }
       - { label: "Body Color", name: "color2", widget: "string" }
       - { label: "Background Color", name: "color3", widget: "string" }
