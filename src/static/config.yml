@@ -61,7 +61,8 @@ collections:
 
   - name: "SiteColors"
     label: "SiteColors"
-    folder: "content/sitecolors"
+    folder: "content/sitecolors",
+    create: true
     fields:
       - { label: "Link Color", name: "color1", widget: "string" }
       - { label: "Body Color", name: "color2", widget: "string" }
