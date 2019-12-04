@@ -62,7 +62,6 @@ collections:
   - name: "Colors"
     label: "Colors"
     folder: "content/colors"
-    identifier_field: color1
     fields:
       - { label: "Link Color", name: "color1", widget: "string" }
       - { label: "Body Color", name: "color2", widget: "string" }
