@@ -13,7 +13,7 @@ function doThing(){
   let about = getAbout( source )
   let contact = getContact( source )
   let assets = join(  __dirname, 'src');
-  let thing = overwriteCSS( assets )
+  let thing = overwriteCSS( source, assets )
 }
 
 doThing();

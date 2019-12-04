@@ -17,15 +17,21 @@ function getIndex( src ){
 	return newSrc[0]
 }
 
-function getColors( content ){
+function getColorsFolder( src ){
+	let newSrc = src.filter( ( folder ) => {
+		return (folder.indexOf( "/colors" ) !== - 1)
+	});
+	return newSrc[0]
+}
+
+function getColors( source ){
 	const isDirectory = source => fs.lstatSync(source).isDirectory();
   const isFile = source => !fs.lstatSync(source).isDirectory();
   const getAllListings = source =>
 		fs.readdirSync(source).map(name => join(source, name));
   let allContent = getAllListings(source);
-  let statementFolder = getColorsFolder( allContent )
-  let statementContents = getAllListings( statementFolder )
-  const data = fs.readFileSync( statementContents[0], 'utf-8');
+  let colorsFolder = getColorsFolder( allContent )
+  console.log( colorsFolder );
 }
 
 function overwriteCSS( content, assets ){
@@ -33,12 +39,12 @@ function overwriteCSS( content, assets ){
   const isFile = assets => !fs.lstatSync(assets).isDirectory();
   const getAllListings = assets =>
 		fs.readdirSync(assets).map(name => join(assets, name));
-  let allAssets = getAllListings(asset);
+  let allAssets = getAllListings( assets );
   let assetsFolder = getAssetsFolder( allAssets )
   let assetsContents = getAllListings( assetsFolder )
   let index = getIndex( assetsContents )
 
-	let colors = this.getColors( content )
+	let colors = getColors( content );
 
   let data = fs.readFileSync( index, 'utf-8');
 
@@ -53,8 +59,8 @@ function overwriteCSS( content, assets ){
   data = data.replace( /#F6F2ED/g, color3 );
   data = data.replace( /#F8F8F5/g, color4 );
 
-  fs.writeFile( assetsFolder + "/index.css", data, () => { console.log("error") })
-  console.log( data )
+  // fs.writeFile( assetsFolder + "/index.css", data, () => { console.log("error") })
+  // console.log( data )
 }
 
 module.exports = {overwriteCSS}
