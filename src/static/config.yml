@@ -62,9 +62,8 @@ collections:
   - name: "Colors"
     label: "Colors"
     folder: "content/colors"
-    create: true
+    identifier_field: color1
     fields:
-      - { label: "Title", name: "thing", widget: "string" }
       - { label: "Link Color", name: "color1", widget: "string" }
       - { label: "Body Color", name: "color2", widget: "string" }
       - { label: "Background Color", name: "color3", widget: "string" }
