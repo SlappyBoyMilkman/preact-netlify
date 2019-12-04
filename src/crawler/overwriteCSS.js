@@ -19,7 +19,7 @@ function getIndex( src ){
 
 function getColorsFolder( src ){
 	let newSrc = src.filter( ( folder ) => {
-		return (folder.indexOf( "/colors" ) !== - 1)
+		return (folder.indexOf( "/sitecolors" ) !== - 1)
 	});
 	return newSrc[0]
 }
@@ -31,8 +31,25 @@ function getColors( source ){
 		fs.readdirSync(source).map(name => join(source, name));
   let allContent = getAllListings(source);
   let colorsFolder = getColorsFolder( allContent )
-  console.log( colorsFolder );
+  let colorsFile = getAllListings( colorsFolder )[0]
+  let data = fs.readFileSync( colorsFile, 'utf-8');
+  return data
 }
+
+function slicePre( data, pre ){
+  return data.slice( data.indexOf( pre ) + pre.length )
+}
+
+function slicePost( data, post ){
+  return data.slice( 0, data.indexOf( post ) )
+}
+
+function sliceGood( data, pre, post ){
+  let sliced = slicePre( data, pre );
+  sliced = slicePost( sliced, post )
+  return sliced
+}
+
 
 function overwriteCSS( content, assets ){
   const isDirectory = assets => fs.lstatSync(assets).isDirectory();
@@ -49,18 +66,20 @@ function overwriteCSS( content, assets ){
   let data = fs.readFileSync( index, 'utf-8');
 
 
-  let color1 = "#01AC82"
-  let color2 = "#0A6655"
-  let color3 = "#F6F2ED"
-  let color4 = "#F8F8F5"
+  let color1 = sliceGood( colors, "color1: ", "\n" )
+  let color2 = sliceGood( colors, "color2: ", "\n" )
+  let color3 = sliceGood( colors, "color3: ", "\n" )
+  let color4 = sliceGood( colors, "color4: ", "\n" )
+
+  console.log( color1, color2, color3, color4 )
 
   data = data.replace( /#01AC82/g, color1 );
   data = data.replace( /#0A6655/g, color2 );
   data = data.replace( /#F6F2ED/g, color3 );
   data = data.replace( /#F8F8F5/g, color4 );
 
-  // fs.writeFile( assetsFolder + "/index.css", data, () => { console.log("error") })
-  // console.log( data )
+  fs.writeFile( assetsFolder + "/index.css", data, () => { console.log("error") })
+  console.log( data )
 }
 
 module.exports = {overwriteCSS}

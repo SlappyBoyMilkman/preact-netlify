@@ -1,8 +1,7 @@
 ---
 title: Thing
-color1: red
-color2: red
-color3: red
-color4: red
+color1: #01AC82
+color2: #0A6655
+color3: #F6F2ED
+color4: #F8F8F5
 ---
-
