@@ -1,0 +1,8 @@
+---
+title: Thing
+color1: red
+color2: red
+color3: red
+color4: red
+---
+
