@@ -17,16 +17,29 @@ function getIndex( src ){
 	return newSrc[0]
 }
 
-function overwriteCSS( source ){
-  const isDirectory = source => fs.lstatSync(source).isDirectory();
+function getColors( content ){
+	const isDirectory = source => fs.lstatSync(source).isDirectory();
   const isFile = source => !fs.lstatSync(source).isDirectory();
   const getAllListings = source =>
 		fs.readdirSync(source).map(name => join(source, name));
   let allContent = getAllListings(source);
-  let assetsFolder = getAssetsFolder( allContent )
+  let statementFolder = getColorsFolder( allContent )
+  let statementContents = getAllListings( statementFolder )
+  const data = fs.readFileSync( statementContents[0], 'utf-8');
+}
+
+function overwriteCSS( content, assets ){
+  const isDirectory = assets => fs.lstatSync(assets).isDirectory();
+  const isFile = assets => !fs.lstatSync(assets).isDirectory();
+  const getAllListings = assets =>
+		fs.readdirSync(assets).map(name => join(assets, name));
+  let allAssets = getAllListings(asset);
+  let assetsFolder = getAssetsFolder( allAssets )
   let assetsContents = getAllListings( assetsFolder )
   let index = getIndex( assetsContents )
-  
+
+	let colors = this.getColors( content )
+
   let data = fs.readFileSync( index, 'utf-8');
 
 
