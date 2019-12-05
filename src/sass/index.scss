@@ -1,5 +1,8 @@
 $gutter: 180px;
-$start-top: 150px;
+$start-top: 220px;
+$start-top--mobile: 140px;
+
+
 $padding-images: 10px;
 $medium-down: 1150px;
 
@@ -68,13 +71,13 @@ a{
   width: 100%;
   position: fixed;
   padding-left: $gutter;
-  top: 140px;
+  top: $start-top;
   left: 0px;
   width: 47vw;
   @media( max-width: 757px ){
     position: relative;
     top: initial;
-    margin-top: 120px;
+    margin-top: 90px;
     padding: 0px;
     width: 100%;
   }
@@ -117,6 +120,9 @@ header{
   // margin: 0 auto;
   // position: absolute;
   top: $start-top;
+  @media( max-width: 768px ){
+    top: $start-top--mobile;
+  }
   // left: 50%;
   transition: .4s;
   // transform: translate( -50%, 0% );
@@ -128,13 +134,16 @@ p, h1, h2, h3{
 
 body{
   background-color: $background-color;
-  margin: 30px 0px;
+  margin: 55px 0px;
 }
 
 .project__drawer__wrapper{
   position: absolute;
   padding-right: $gutter;
   top: $start-top;
+  @media( max-width: 768px ){
+    top: $start-top--mobile;
+  }
   width: 100%;
   width: 50vw;
   left: 50vw;

@@ -9,8 +9,9 @@ import { route } from 'preact-router';
 
 class About extends React.Component{
   constructor( props ){
-    const [data, isLoading] = usePrerenderData(props);
     super();
+    const [data, isLoading] = usePrerenderData(props);
+    document.title = "Jack Ferrante ・ About"
     this.state = {
       about: data.about
     }

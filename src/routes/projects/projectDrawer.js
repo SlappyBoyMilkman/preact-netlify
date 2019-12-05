@@ -7,6 +7,10 @@ import Footer from "../../components/footer/index.js"
 class ProjectDrawer extends React.Component{
   constructor( props ){
     super();
+
+    if( props.selectedProject === props.project ){
+      document.title = `Jack Ferrante ・ ${ props.project.title }`
+    }
     this.state = {
       project: props.project,
       projects: props.projects,
@@ -16,6 +20,9 @@ class ProjectDrawer extends React.Component{
   }
 
   componentWillReceiveProps( props ){
+    if( props.selectedProject === props.project ){
+      document.title = `Jack Ferrante ・ ${ props.project.title }`
+    }
     this.setState({ project: props.project, selectedProject: props.selectedProject, windowWidth: props.windowWidth })
   }
 

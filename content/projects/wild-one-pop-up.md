@@ -42,6 +42,6 @@ Mural artist <br/> [Marleigh Culver](https://www.marleighculver.com/)
 
 Plants <br/> [Rooted](https://rooted.nyc/)
 
-Photo <br/> [Andy Romer](http://www.romerphoto.com/)
+Photo <br/> <a href = "https://facebook.com" target = "_blank" >Andy Richter</a>
 
 Press <br/> [Dezeen](https://www.dezeen.com/2018/11/01/new-york-city-pop-up-shops-design-gifts/)

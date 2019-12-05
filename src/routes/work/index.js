@@ -10,6 +10,7 @@ const $ = require( "jquery" );
 class Work extends React.Component{
   constructor( props ){
     super();
+    document.title = "Jack Ferrante ・ Work"
     if( props.projects ){
       if( props.project ){
         this.state = {

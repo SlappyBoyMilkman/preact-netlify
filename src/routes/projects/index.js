@@ -14,10 +14,12 @@ export class Project extends React.Component{
     let projects = data.projects
     let selectedProject = this.getSelectedProject( props.matches.project, projects  )
     let drawerOpen = false
-    debugger
     if( selectedProject ){
       drawerOpen = true;
     }
+
+    document.title = `Jack Ferrante ・ Home`
+
     this.state = {
       settings: data,
       statement: data.statement,

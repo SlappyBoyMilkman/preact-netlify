@@ -1,6 +1,5 @@
 ---
 title: Hasbro
-company: '[Hasbro](https://shop.hasbro.com/en-us)'
+company: <a href = "hasbro.com" target = "_blank">Hasbro</a>
 dates: 01.2014 – 04.2014
 ---
-

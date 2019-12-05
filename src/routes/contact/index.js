@@ -10,6 +10,7 @@ const $ = require( "jquery" )
 class Contact extends React.Component{
 	constructor( props ){
 		super();
+		document.title = "Jack Ferrante ・ About"
 		const [data, isLoading] = usePrerenderData(props);
 		this.state = {
 			contact: data.contact
