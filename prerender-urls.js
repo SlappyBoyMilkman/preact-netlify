@@ -15,7 +15,7 @@ const statement = getStatement( join( __dirname, "content" ) );
 const about = getAbout( join( __dirname, "content" ) );
 const contact = getContact( join( __dirname, "content" ) );
 overwriteCSS( join( __dirname, "content" ), join(  __dirname, 'src') )
-
+console.log("do thing");
 
 let funky = () => {
 	const pages = [
