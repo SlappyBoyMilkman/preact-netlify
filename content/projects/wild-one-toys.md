@@ -11,9 +11,23 @@ description: >-
   objects with intuitive function that are downright fun to play with.
 lefthand: true
 ---
-![](/assets/cody-black-nm89mzvar5i-unsplash.jpg)
+![](/assets/ferrante_design_wild_one_toys_001.jpg)
 
-![](/assets/2.png)
+![](/assets/ferrante_design_wild_one_toys_002.jpg)
+
+![](/assets/ferrante_design_wild_one_toys_003.jpg)
+
+![](/assets/ferrante_design_wild_one_toys_004.jpg)
+
+![](/assets/ferrante_design_wild_one_toys_005.jpg)
+
+![](/assets/ferrante_design_wild_one_toys_006.jpg)
+
+![](/assets/ferrante_design_wild_one_toys_007.jpg)
+
+![](/assets/ferrante_design_wild_one_toys_009.jpg)
+
+![](/assets/ferrante_design_wild_one_toys_010.jpg)
 
 Lead Industrial Designer  <br/>[Chris Santone](https://verygreat.nyc/)
 
