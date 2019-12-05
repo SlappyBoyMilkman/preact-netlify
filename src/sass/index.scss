@@ -1,6 +1,6 @@
 $gutter: 180px;
 $start-top: 220px;
-$start-top--mobile: 140px;
+$start-top--mobile: 90px;
 
 
 $padding-images: 10px;
@@ -38,6 +38,10 @@ $drawer-background-color: #F8F8F5;
 
 .page{
   padding-top: 120px;
+  @media( max-width: 768px ){
+    padding-top: $start-top--mobile;
+
+  }
 }
 
 
@@ -218,7 +222,10 @@ body{
   float: right;
   margin-right: 8px;
   a{
-    margin-left: 10px;
+    margin-left: 35px;
+    @media( max-width: 768px){
+      margin-left: 10px;
+    }
   }
 }
 
@@ -408,7 +415,16 @@ header{
 
 }
 
-.project__drawer__markdown{}
+.project__drawer__markdown{
+  margin-top: -30px;
+  p{
+    margin: 10px 0px;
+    line-height: 1.25em;
+  }
+  img{
+    display: block;
+  }
+}
 .markdown-division{
   margin-top: 60px;
   display: block;
