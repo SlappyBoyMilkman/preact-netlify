@@ -15,22 +15,12 @@ lefthand: true
 
 ![](/assets/2.png)
 
-Lead Industrial Designer  [Chris Santone](https://verygreat.nyc/)
+Lead Industrial Designer  <br/>[Chris Santone](https://verygreat.nyc/)
 
+VM Director <br/> [Scott Bleicher](https://verygreat.nyc/)
 
+Photographer <br/> [Sam Liebeskind](https://verygreat.nyc/)
 
-VM Director  [Scott Bleicher](https://verygreat.nyc/)
+Retouching <br/> [Kate Edwards](https://verygreat.nyc/)
 
-
-
-Photographer  [Sam Liebeskind](https://verygreat.nyc/)
-
-
-
-Retouching  [Kate Edwards](https://verygreat.nyc/)
-
-
-
-
-
-Press  [Dwell](https://www.dwell.com/article/wild-one-modern-pet-toys-4e58c5a6)  [Dogmilk](https://dog-milk.com/stylish-dog-toys-from-wild-one/?utm_source=dlvr.it&utm_medium=twitter)
+Press <br/> [Dwell](https://www.dwell.com/article/wild-one-modern-pet-toys-4e58c5a6)  <br/>[Dogmilk](https://dog-milk.com/stylish-dog-toys-from-wild-one/?utm_source=dlvr.it&utm_medium=twitter)
