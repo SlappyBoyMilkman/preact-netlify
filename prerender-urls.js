@@ -13,9 +13,9 @@ const blogs = 1;
 const projects = getProjects( join( __dirname, "content" ) );
 const statement = getStatement( join( __dirname, "content" ) );
 const about = getAbout( join( __dirname, "content" ) );
-const contact = getContact( join( __dirname, "content" ), join(  __dirname, 'src') );
+const contact = getContact( join( __dirname, "content" ) );
 
-overwriteCSS( join( __dirname, "content" ), assets )
+overwriteCSS( join( __dirname, "content" ), join(  __dirname, 'src') )
 
 
 let funky = () => {
