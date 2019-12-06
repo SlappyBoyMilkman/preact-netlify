@@ -5,6 +5,8 @@ shortDescription: Process and additional work
 description: Process and additional work
 lefthand: false
 ---
+Artiphon Instrument 1. Surfacing and design details completed while interning at [Pull Creative](http://www.pullcreative.com/).
+
 ![](/assets/ferrante_design_asst_projects_001.jpg)
 
 ![](/assets/ferrante_design_asst_projects_002.jpg)
