@@ -29,12 +29,13 @@ lefthand: true
 
 ![](/assets/ferrante_design_wild_one_toys_010.jpg)
 
-Lead Industrial Designer  <br/>[Chris Santone](https://verygreat.nyc/)
+<span className = "markdown-division"/>
+Lead Industrial Designer <br/> <a href = "https://www.instagram.com/croissant_one/" target = "_blank" >Chris Santone</a>
 
-VM Director <br/> [Scott Bleicher](https://verygreat.nyc/)
+VM Director <br/> <a href = "http://sgbleicher.com/" target = "_blank" >Scott Bleicher</a>
 
-Photographer <br/> [Sam Liebeskind](https://verygreat.nyc/)
+Photographer <br/> <a href = "https://www.samliebe.com/" target = "_blank" >Sam Liebeskind</a>
 
-Retouching <br/> [Kate Edwards](https://verygreat.nyc/)
+Retouching <br/> <a href = "http://kateanthony.co/" target = "_blank" >Kate Edwards</a>
 
-Press <br/> [Dwell](https://www.dwell.com/article/wild-one-modern-pet-toys-4e58c5a6)  <br/>[Dogmilk](https://dog-milk.com/stylish-dog-toys-from-wild-one/?utm_source=dlvr.it&utm_medium=twitter)
+Press <br/> <a href = "https://www.dwell.com/article/wild-one-modern-pet-toys-4e58c5a6" target = "_blank" >Dwell</a> <br/> <a href = "https://dog-milk.com/stylish-dog-toys-from-wild-one/?utm_source=dlvr.it&utm_medium=twitter" target = "_blank" >Dogmilk</a>
