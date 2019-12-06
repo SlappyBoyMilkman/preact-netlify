@@ -1,5 +1,5 @@
 ---
-title: Based in San Francisco.
+title: 'Based in San Francisco, California.'
 ---
 Currently looking for design opportunities in the Bay Area. Reach out for any freelance work, or just to chat! 
 
