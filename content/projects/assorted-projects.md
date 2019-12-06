@@ -17,14 +17,16 @@ Artiphon Instrument 1. Surfacing and design details completed while interning at
 
 ![](/assets/ferrante_design_asst_projects_005.jpg)
 
+Process renders for the Courant CARRY.
+
 ![](/assets/ferrante_design_asst_projects_006.jpg)
 
 ![](/assets/ferrante_design_asst_projects_007.jpg)
 
 ![](/assets/ferrante_design_asst_projects_008.jpg)
 
-![](/assets/ferrante_design_asst_projects_009.jpg)
+Wild One Bloomingdale's fixture, on display in 15 locations.
 
-![](/assets/ferrante_design_asst_projects_010.jpg)
+![](/assets/ferrante_design_asst_projects_009.jpg)
 
 ![](/assets/ferrante_design_asst_projects_010.jpg)
