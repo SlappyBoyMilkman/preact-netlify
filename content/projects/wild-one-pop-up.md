@@ -36,12 +36,12 @@ lefthand: true
 
 ![](/assets/ferrante_design_wild_one_store_013.jpg)
 <span className = "markdown-division"/>
-Fabrication <br/> [Bunker Hill Fabrication](https://www.bunkerhillfabrication.com/)
+Fabrication <br/> <a href = "https://www.bunkerhillfabrication.com/" target = "_blank" >Bunker Hill Fabrication</a>
 
-Mural artist <br/> [Marleigh Culver](https://www.marleighculver.com/)
+Mural artist <br/> <a href = "https://www.marleighculver.com/" target = "_blank" >Marleigh Culver</a>
 
-Plants <br/> [Rooted](https://rooted.nyc/)
+Plants <br/> <a href = "https://rooted.nyc//" target = "_blank" >Rooted</a>
 
-Photo <br/> <a href = "https://facebook.com" target = "_blank" >Andy Richter</a>
+Photo <br/> <a href = "http://www.romerphoto.com/" target = "_blank" >Andy Romer</a>
 
 Press <br/> [Dezeen](https://www.dezeen.com/2018/11/01/new-york-city-pop-up-shops-design-gifts/)
