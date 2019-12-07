@@ -5,7 +5,7 @@ shortDescription: Process and additional work
 description: Process and additional work
 lefthand: false
 ---
-Artiphon Instrument 1. Surfacing and design details completed while interning at [Pull Creative](http://www.pullcreative.com/).
+<br/>Artiphon Instrument 1. Surfacing and design details completed while interning at [Pull Creative](http://www.pullcreative.com/).
 
 ![](/assets/ferrante_design_asst_projects_001.jpg)
 
@@ -17,7 +17,7 @@ Artiphon Instrument 1. Surfacing and design details completed while interning at
 
 ![](/assets/ferrante_design_asst_projects_005.jpg)
 
-Process renders for the Courant CARRY.
+<br/><br/>Process renders for the Courant CARRY.
 
 ![](/assets/ferrante_design_asst_projects_006.jpg)
 
@@ -25,7 +25,7 @@ Process renders for the Courant CARRY.
 
 ![](/assets/ferrante_design_asst_projects_008.jpg)
 
-Wild One Bloomingdale's fixture, on display in 15 locations.
+<br/><br/>Wild One Bloomingdale's fixture, on display in 15 locations.
 
 ![](/assets/ferrante_design_asst_projects_009.jpg)
 
