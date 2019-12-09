@@ -48,7 +48,7 @@ collections:
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "dates", name: "dates", widget: "text" }
+      - { label: "body", name: "dates", widget: "text" }
   - name: "Contact"
     label: "Contact"
     folder: "content/contact"
