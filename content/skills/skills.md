@@ -1,5 +1,4 @@
 ---
 title: Skills
-dates: Something something something something something
 ---
-
+Thing thing thing thing thing
