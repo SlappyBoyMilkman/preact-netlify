@@ -11,9 +11,13 @@ const { overwriteCSS } = require("./src/crawler/overwriteCSS.js")
 const content = 1;
 const blogs = 1;
 const projects = getProjects( join( __dirname, "content" ) );
+console.log("projects");
 const statement = getStatement( join( __dirname, "content" ) );
+console.log("statement");
 const about = getAbout( join( __dirname, "content" ) );
+console.log("about");
 const contact = getContact( join( __dirname, "content" ) );
+console.log("contact");
 overwriteCSS( join( __dirname, "content" ), join(  __dirname, 'src') )
 console.log("do thing");
 

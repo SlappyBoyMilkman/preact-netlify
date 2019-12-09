@@ -38,6 +38,10 @@ class About extends React.Component{
     )
   }
 
+  skills(){
+    
+  }
+
   render(){
     return(
       <div className = "page page--about">
@@ -53,7 +57,7 @@ class About extends React.Component{
             <div className = "grid__item medium-up--one-half">
               <h2 className = "akkurat">Internships</h2>
               {
-                this.internships()
+                this.skills()
               }
             </div>
           </div>
