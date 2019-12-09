@@ -12,7 +12,8 @@ class About extends React.Component{
     super();
     const [data, isLoading] = usePrerenderData(props);
     this.state = {
-      about: data.about
+      about: data.about,
+      skills: data.skills
     }
   }
 
@@ -39,7 +40,20 @@ class About extends React.Component{
   }
 
   skills(){
-    
+    // return this.state.skills.map(
+    //   ( skill, index ) => {
+    //     return(
+    //       <div className = "page--about__skill">
+    //         <h3 className = "page--about__skill__title">
+    //           { skill.title }
+    //         </h3>
+    //         <p className = "">
+    //           { skill.description }
+    //         </p>
+    //       </div>
+    //     )
+    //   }
+    // );
   }
 
   render(){
@@ -54,8 +68,7 @@ class About extends React.Component{
                 <Markdown>{ this.state.about.experience }</Markdown>
               </div>
             </div>
-            <div className = "grid__item medium-up--one-half">
-              <h2 className = "akkurat">Internships</h2>
+            <div className = "grid__item medium-up--one-half graphik graphik-body">
               {
                 this.skills()
               }

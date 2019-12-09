@@ -6,6 +6,7 @@ const { getProjects } = require('./src/crawler/getProjects.js');
 const { getAbout } = require( "./src/crawler/getAbout.js" )
 const { getContact } = require( "./src/crawler/getContact.js" )
 const { overwriteCSS } = require("./src/crawler/overwriteCSS.js")
+const { getSkills } = require("./src/crawler/getSkills.js")
 
 
 const content = 1;
@@ -19,7 +20,7 @@ console.log("about");
 const contact = getContact( join( __dirname, "content" ) );
 console.log("contact");
 overwriteCSS( join( __dirname, "content" ), join(  __dirname, 'src') )
-console.log("do thing");
+let skills = getSkills( join( __dirname, "content" ) );
 
 let funky = () => {
 	const pages = [
@@ -32,7 +33,7 @@ let funky = () => {
 			statement: statement,
 		},
 		{ url: '/contact/', contact: contact },
-		{ url: '/about/', about: about },
+		{ url: '/about/', about: about, skills: skills },
 		{ url: '/contact/success' },
 		{
 			url: '/work',

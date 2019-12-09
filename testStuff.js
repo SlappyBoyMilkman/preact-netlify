@@ -5,15 +5,17 @@ const { getAbout } = require('./src/crawler/getAbout');
 const { getProjects } = require('./src/crawler/getProjects');
 const { getContact } = require('./src/crawler/getContact');
 const { overwriteCSS } = require("./src/crawler/overwriteCSS.js")
+const { getSkills } = require("./src/crawler/getSkills.js")
 
 function doThing(){
   let source = join(  __dirname, 'content');
-  let projects = getProjects( source )
-  let statement = getStatement( source )
-  let about = getAbout( source )
-  let contact = getContact( source )
+  // let projects = getProjects( source )
+  // let statement = getStatement( source )
+  // let about = getAbout( source )
+  // let contact = getContact( source )
+  let skills = getSkills( source );
   let assets = join(  __dirname, 'src');
-  let thing = overwriteCSS( source, assets )
+  // let thing = overwriteCSS( source, assets )
 }
 
 doThing();
