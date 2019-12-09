@@ -1,4 +1,4 @@
 ---
-title: Technology
+title: Software
 ---
-things things things things things things
+Photoshop, Illustrator, InDesign, After Effects, XD, Premiere, Solidworks, Rhino, Keyshot, Fusion360 
