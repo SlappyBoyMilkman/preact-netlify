@@ -32,3 +32,14 @@ lefthand: true
 ![](/assets/ferrante_design_wp_porter_010.jpg)
 
 ![](/assets/ferrante_design_wp_porter_011.jpg)
+
+<span className = "markdown-division"/>
+Lead Industrial Designer <br/> <a href = "https://www.instagram.com/croissant_one/" target = "_blank" >Chris Santone</a>
+
+VM Director <br/> <a href = "http://sgbleicher.com/" target = "_blank" >Scott Bleicher</a>
+
+Photographer <br/> <a href = "https://www.samliebe.com/" target = "_blank" >Sam Liebeskind</a>
+
+Retouching <br/> <a href = "http://kateanthony.co/" target = "_blank" >Kate Edwards</a>
+
+Press <br/> <a href = "https://thedieline.com/blog/2019/5/8/announcing-dieline-awards-2019-third-place-winners" target = "_blank" >Dieline</a>

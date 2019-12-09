@@ -18,6 +18,9 @@
 
 .page {
   padding-top: 120px; }
+  @media (max-width: 768px) {
+    .page {
+      padding-top: 90px; } }
 
 a {
   color: #01AC82;
@@ -45,7 +48,7 @@ a {
   width: 100%;
   position: fixed;
   padding-left: 180px;
-  top: 140px;
+  top: 220px;
   left: 0px;
   width: 47vw;
   box-sizing: border-box;
@@ -54,7 +57,7 @@ a {
     .statement {
       position: relative;
       top: initial;
-      margin-top: 120px;
+      margin-top: 90px;
       padding: 0px;
       width: 100%; } }
   .statement:hover .statement__text-wrapper {
@@ -75,25 +78,31 @@ header a {
   font-size: 14px; }
 
 .statement__text-wrapper {
-  top: 150px;
+  top: 220px;
   transition: .4s; }
+  @media (max-width: 768px) {
+    .statement__text-wrapper {
+      top: 90px; } }
 
 p, h1, h2, h3 {
   color: #0A6655; }
 
 body {
   background-color: #F6F2ED;
-  margin: 30px 0px; }
+  margin: 55px 0px; }
 
 .project__drawer__wrapper {
   position: absolute;
   padding-right: 180px;
-  top: 150px;
+  top: 220px;
   width: 100%;
   width: 50vw;
   left: 50vw;
   height: 100%;
   box-sizing: border-box; }
+  @media (max-width: 768px) {
+    .project__drawer__wrapper {
+      top: 90px; } }
   @media (max-width: 757px) {
     .project__drawer__wrapper {
       left: 0vw;
@@ -152,7 +161,10 @@ body {
   float: right;
   margin-right: 8px; }
   .header__nav a {
-    margin-left: 10px; }
+    margin-left: 35px; }
+    @media (max-width: 768px) {
+      .header__nav a {
+        margin-left: 10px; } }
 
 header {
   position: absolute;
@@ -278,7 +290,7 @@ header {
   .footer a {
     float: left;
     clear: both;
-    margin-top: 0px;
+    margin-top: 10px;
     color: #01AC82; }
   @media (max-width: 768px) {
     .footer {
@@ -290,8 +302,22 @@ header {
     .page-title__mobile {
       display: block; } }
 
+.project__drawer__markdown {
+  margin-top: -30px; }
+  .project__drawer__markdown p {
+    margin: 10px 0px;
+    line-height: 1.5em; }
+  .project__drawer__markdown img {
+    display: block; }
+
 .markdown-division {
   margin-top: 60px;
   display: block; }
+
+.graphik-body {
+  color: #0A6655; }
+
+.graphik-body a {
+  color: #01AC82; }
 
 /*# sourceMappingURL=index.css.map */

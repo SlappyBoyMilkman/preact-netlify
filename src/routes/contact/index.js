@@ -60,7 +60,7 @@ class Contact extends React.Component{
 			<div className = "page page--contact">
 				<div className = "item">
 					<div className = "contact__text-wrapper">
-						<h1>{ this.state.contact.title }</h1>
+						<h1 dangerouslySetInnerHTML = {{ __html: this.state.contact.title }}></h1>
 						<div className = { this.getClassName() } ref = { ( ref ) => { this.getRef( ref ) } }>
 							<Markdown>
 								{

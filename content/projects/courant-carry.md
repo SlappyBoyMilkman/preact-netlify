@@ -22,3 +22,12 @@ lefthand: true
 ![](/assets/ferrante_design_courant_carry_007.jpg)
 
 ![](/assets/ferrante_design_courant_carry_008.jpg)
+
+<span className = "markdown-division"/>
+VM Director <br/> <a href = "http://sgbleicher.com/" target = "_blank" >Scott Bleicher</a>
+
+Photographer <br/> <a href = "https://www.samliebe.com/" target = "_blank" >Sam Liebeskind</a>
+
+Retouching <br/> <a href = "http://kateanthony.co/" target = "_blank" >Kate Edwards</a>
+
+Press <br/> <a href = "https://www.ces.tech/Innovation-Awards/Honorees/2020/Honorees/C/CARRY.aspx" target = "_blank" >CES Innovation Awards</a>

@@ -57,8 +57,8 @@ function getAbout( source ){
   let title = sliceGood( data, "title: ", "\n---" )
   let experience = slicePre( data, "title: " )
   experience = slicePre( experience, "---\n" )
-  let internships = getInternships( internshipsListings )
-  return { experience: experience, title: title, internships: internships }
+  // let internships = getInternships( internshipsListings )
+  return { experience: experience, title: title }
 }
 
 

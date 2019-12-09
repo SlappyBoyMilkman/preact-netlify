@@ -9,11 +9,20 @@ import { route } from 'preact-router';
 
 class About extends React.Component{
   constructor( props ){
-    const [data, isLoading] = usePrerenderData(props);
     super();
+    const [data, isLoading] = usePrerenderData(props);
     this.state = {
       about: data.about
     }
+  }
+
+  componentDidMount(){
+    document.getElementsByClassName( "header__lefthand-nav" )[0].style.position = "absolute";
+  }
+
+  componentWillUnmount(){
+    document.getElementsByClassName( "header__lefthand-nav" )[0].style.position = "";
+    debugger
   }
 
   internships(){

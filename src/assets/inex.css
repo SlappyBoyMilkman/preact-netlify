@@ -1,0 +1,56 @@
+/*
+Error: Invalid CSS after "...margin-top: 0px": expected "{", was ";"
+        on line 399 of ./src/sass/index.scss
+
+394:   margin-top: 65px;
+395:   a{
+396:     float: left;
+397:     clear: both;
+398: <<<<<<< HEAD
+399:     margin-top: 0px;
+400:     color: #01AC82;
+401: =======
+402:     margin-top: 10px;
+403:     color: $link-color;
+404: >>>>>>> c95367e17a8cb167974e8f4751f94782545e931d
+
+Backtrace:
+./src/sass/index.scss:399
+/usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:1207:in `expected'
+/usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:1137:in `expected'
+/usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:1132:in `tok!'
+/usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:665:in `block'
+/usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:735:in `declaration_or_ruleset'
+/usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:685:in `block_child'
+/usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:677:in `block_contents'
+/usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:666:in `block'
+/usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:735:in `declaration_or_ruleset'
+/usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:685:in `block_child'
+/usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:677:in `block_contents'
+/usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:666:in `block'
+/usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:658:in `ruleset'
+/usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:684:in `block_child'
+/usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:677:in `block_contents'
+/usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:125:in `stylesheet'
+/usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:41:in `parse'
+/usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.23/lib/sass/engine.rb:406:in `_to_tree'
+/usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.23/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+/usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.23/lib/sass/engine.rb:298:in `render_with_sourcemap'
+/usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `each'
+/usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:294:in `watch'
+/usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.23/lib/sass/plugin.rb:109:in `method_missing'
+/usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:360:in `watch_or_update'
+/usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.23/lib/sass/exec/base.rb:52:in `parse'
+/usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.23/lib/sass/exec/base.rb:19:in `parse!'
+/usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.23/bin/sass:13:in `<top (required)>'
+/usr/local/var/rbenv/versions/2.1.2/bin/sass:23:in `load'
+/usr/local/var/rbenv/versions/2.1.2/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...margin-top: 0px\": expected \"{\", was \";\"\A         on line 399 of ./src/sass/index.scss\A \A 394:   margin-top: 65px;\A 395:   a{\A 396:     float: left;\A 397:     clear: both;\A 398: <<<<<<< HEAD\A 399:     margin-top: 0px;\A 400:     color: #01AC82;\A 401: =======\A 402:     margin-top: 10px;\A 403:     color: $link-color;\A 404: >>>>>>> c95367e17a8cb167974e8f4751f94782545e931d"; }

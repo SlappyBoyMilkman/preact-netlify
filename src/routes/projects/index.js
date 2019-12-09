@@ -17,6 +17,8 @@ export class Project extends React.Component{
     if( selectedProject ){
       drawerOpen = true;
     }
+
+
     this.state = {
       settings: data,
       statement: data.statement,

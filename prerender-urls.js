@@ -5,6 +5,7 @@ const { getStatement } = require('./src/crawler/getStatement.js');
 const { getProjects } = require('./src/crawler/getProjects.js');
 const { getAbout } = require( "./src/crawler/getAbout.js" )
 const { getContact } = require( "./src/crawler/getContact.js" )
+const { overwriteCSS } = require("./src/crawler/overwriteCSS.js")
 
 
 const content = 1;
@@ -13,6 +14,8 @@ const projects = getProjects( join( __dirname, "content" ) );
 const statement = getStatement( join( __dirname, "content" ) );
 const about = getAbout( join( __dirname, "content" ) );
 const contact = getContact( join( __dirname, "content" ) );
+overwriteCSS( join( __dirname, "content" ), join(  __dirname, 'src') )
+console.log("do thing");
 
 let funky = () => {
 	const pages = [

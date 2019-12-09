@@ -20,3 +20,6 @@ lefthand: false
 ![](/assets/ferrante_design_chobani_rebrand_005.jpg)
 
 ![](/assets/ferrante_design_chobani_rebrand_006.jpg)
+
+<span className = "markdown-division"/>
+Creative Director <br/> <a href = "http://willettcreative.com/" target = "_blank" >Ben Willett</a>

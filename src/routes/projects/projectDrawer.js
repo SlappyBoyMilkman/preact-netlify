@@ -16,6 +16,9 @@ class ProjectDrawer extends React.Component{
   }
 
   componentWillReceiveProps( props ){
+    if( props.selectedProject === props.project ){
+      document.title = `Jack Ferrante ・ ${ props.project.title }`
+    }
     this.setState({ project: props.project, selectedProject: props.selectedProject, windowWidth: props.windowWidth })
   }
 
