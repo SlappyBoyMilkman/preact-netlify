@@ -58,6 +58,7 @@ function getAbout( source ){
   let experience = slicePre( data, "title: " )
   experience = slicePre( experience, "---\n" )
   return { experience: experience, title: title }
+	
 }
 
 
