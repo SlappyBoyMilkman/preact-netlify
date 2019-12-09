@@ -50,15 +50,13 @@ function getAbout( source ){
     fs.readdirSync(source).map(name => join(source, name));
   let allContent = getAllListings(source);
   let statementFolder = getFolder( allContent, "/experience" )
-  let internshipsFolder = getFolder( allContent, "/internships" )
-  let internshipsListings = getAllListings( internshipsFolder )
   let statementContents = getAllListings( statementFolder )
   const data = fs.readFileSync( statementContents[0], 'utf-8');
   let title = sliceGood( data, "title: ", "\n---" )
   let experience = slicePre( data, "title: " )
   experience = slicePre( experience, "---\n" )
   return { experience: experience, title: title }
-	
+
 }
 
 
