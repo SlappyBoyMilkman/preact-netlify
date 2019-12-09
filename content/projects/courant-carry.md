@@ -1,5 +1,5 @@
 ---
-title: Courant Carry
+title: Courant CARRY
 year: '2019'
 shortDescription: Wireless charging power bank
 description: >-
