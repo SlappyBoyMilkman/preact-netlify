@@ -98,6 +98,11 @@
   text-transform: uppercase;
 }
 
+.page--about__skill h3{
+  font-family: "akkurat";
+  font-size: 14px;
+}
+
 .graphik-body{
   font-size: 14px;
   line-height: 1.8em;

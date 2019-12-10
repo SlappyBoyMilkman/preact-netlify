@@ -63,7 +63,7 @@ class About extends React.Component{
           <h1 className = "page-title__mobile">About</h1>
           <div className = "grid">
             <div className = "grid__item medium-up--one-half">
-              <h2 className = "akkurat">{ this.state.about.title }</h2>
+              <h2 className = "akkurat" style = {{ marginTop: "0px" }}>{ this.state.about.title }</h2>
               <div className = "graphik graphik-body">
                 <Markdown>{ this.state.about.experience }</Markdown>
               </div>

@@ -320,4 +320,9 @@ header {
 .graphik-body a {
   color: #01AC82; }
 
+.page--about__skill p {
+  margin: 0px; }
+.page--about__skill h3 {
+  margin: 0px; }
+
 /*# sourceMappingURL=index_template.css.map */
