@@ -47,8 +47,7 @@ class About extends React.Component{
             <h3 className = "page--about__skill__title">
               { skill.title }
             </h3>
-            <p className = "">
-              { skill.description }
+            <p className = "" style = {{ whiteSpace: "preLine" }} dangerouslySetInnerHTML = {{ __html: skill.description }} >
             </p>
           </div>
         )

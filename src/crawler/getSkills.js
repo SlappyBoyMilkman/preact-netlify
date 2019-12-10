@@ -29,7 +29,9 @@ function getFiles( skillsContents ){
       let obj = {};
       let data = fs.readFileSync( skill, 'utf-8');
       let title = sliceGood( data, "title: ", "\n" );
-      let description = sliceGood(slicePre( data, "title: " ), "---\n" , "\n");
+      let description = slicePre(slicePre( data, "title: " ), "---\n");
+			description = description.slice( 0, description.lastIndexOf( "\n" ) )
+			console.log( description )
       obj.title = title;
       obj.description = description;
       objs.push( obj );

@@ -323,7 +323,8 @@ header {
 .page--about__skill {
   margin-bottom: 20px; }
   .page--about__skill p {
-    margin: 0px; }
+    margin: 0px;
+    white-space: pre-line; }
   .page--about__skill h3 {
     margin: 0px;
     font-family: akkurat;
