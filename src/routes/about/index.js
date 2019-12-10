@@ -40,20 +40,20 @@ class About extends React.Component{
   }
 
   skills(){
-    // return this.state.skills.map(
-    //   ( skill, index ) => {
-    //     return(
-    //       <div className = "page--about__skill">
-    //         <h3 className = "page--about__skill__title">
-    //           { skill.title }
-    //         </h3>
-    //         <p className = "">
-    //           { skill.description }
-    //         </p>
-    //       </div>
-    //     )
-    //   }
-    // );
+    return this.state.skills.map(
+      ( skill, index ) => {
+        return(
+          <div className = "page--about__skill">
+            <h3 className = "page--about__skill__title">
+              { skill.title }
+            </h3>
+            <p className = "">
+              { skill.description }
+            </p>
+          </div>
+        )
+      }
+    );
   }
 
   render(){
