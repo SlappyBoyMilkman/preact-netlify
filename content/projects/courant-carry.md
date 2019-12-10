@@ -23,6 +23,8 @@ lefthand: true
 
 ![](/assets/ferrante_design_courant_carry_008.jpg)
 
+![](/assets/ferrante_design_courant_carry_009.jpg)
+
 <span className = "markdown-division"/>
 VM Director <br/> <a href = "http://sgbleicher.com/" target = "_blank" >Scott Bleicher</a>
 
