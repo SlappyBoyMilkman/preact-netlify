@@ -88,7 +88,7 @@ p, h1, h2, h3 {
   color: #0A6655; }
 
 body {
-  background-color: #F6F2ED;
+  background-color: #F5F2E5;
   margin: 55px 0px; }
 
 .project__drawer__wrapper {
@@ -320,13 +320,9 @@ header {
 .graphik-body a {
   color: #01AC82; }
 
-.page--about__skill {
-  margin-bottom: 20px; }
-  .page--about__skill p {
-    margin: 0px; }
-  .page--about__skill h3 {
-    margin: 0px;
-    font-family: akkurat;
-    margin-bottom: 0px; }
+.page--about__skill p {
+  margin: 0px; }
+.page--about__skill h3 {
+  margin: 0px; }
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=index_template.css.map */
