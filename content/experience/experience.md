@@ -3,7 +3,7 @@ title: Experience
 ---
 [Very Great](https://verygreat.nyc/)<br>
 02.2018 – 09.2019<br>
-_Lead Creative Strategist_ | _Designer_<br>Led a small team that brought product and experiences from idea to market for each of Very Great's brands – Wild One, W&P, and Courant. Aided in each aspect of the design process, including brand strategy, industrial design, communications design, and art direction. Projects ranged from identity design for an external client to working closely with interior architects in designing Very Great’s new 100-person office in the heart of SoHo.<br><br>
+_Lead Creative Strategist_ _\|_ _Designer_<br>Led a small team that brought product and experiences from idea to market for each of Very Great's brands – Wild One, W&P, and Courant. Aided in each aspect of the design process, including brand strategy, industrial design, communications design, and art direction. Projects ranged from identity design for an external client to working closely with interior architects in designing Very Great’s new 100-person office in the heart of SoHo.<br><br>
 
 [Team Epiphany](https://www.teamepiphany.com/)<br>
 12.2017 – 02.2018<br>
