@@ -17,6 +17,8 @@ lefthand: false
 
 ![](/assets/ferrante_design_chobani_rebrand_003.jpg)
 
+![](/assets/ferrante_design_chobani_rebrand_007.jpg)
+
 ![](/assets/ferrante_design_chobani_rebrand_005.jpg)
 
 ![](/assets/ferrante_design_chobani_rebrand_006.jpg)
